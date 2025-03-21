@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <div class="app-wrapper">
+        <div class="header">
+          <div class="logo-online-wrapper">
+            <a href="/">
+              <img src="./assets/images/logotype-dark.svg" alt="logo" />
+            </a>
+            <div class="online-count">
+              <span class="online-outer">
+                <span class="online-inner"> </span>
+              </span>
+              <p>410</p>
+            </div>
+          </div>
+          <div class="nav">
+            <a class="nav-item" href="">Игры</a>
+            <a class="nav-item" href="">Бонусы</a>
+            <a class="nav-item" href="">Рефералы</a>
+            <a class="nav-item" href="">FAQ</a>
+            <a class="nav-item" href="">Поддержка</a>
+          </div>
+          <div class="auth-btns">
+            <button class="sign-in-btn">
+              <svg class="icon">
+                <use xlink:href="./assets/icons/icons.svg#lock-open"></use></svg
+              >Вход
+            </button>
+            <button class="sign-up-btn">
+              <svg class="icon">
+                <use href="./assets/icons/icons.svg#person-add"></use></svg
+              >Регистрация
+            </button>
+          </div>
+        </div>
+        <div class="main-app-wrapper">
+          <div class="sidebar">
+            <div class="sidebar-link-group">
+              <a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#slots-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#live-cards"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#dice-icon"></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#wheels-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+            </div>
+            <div class="sidebar-socials">
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div class="main slots-page">
+            <div class="container">
+              <div class="group-header">
+                <div class="group-title">
+                  <span class="group-icon">
+                    <img src="./assets/icons/slots-machine_icon.svg" alt=""
+                  /></span>
+                  <h3>Профиль</h3>
+                </div>
+              </div>
+              <div class="profile-wrapper">
+                <div class="profile-grid">
+                  <div class="profile-block">
+                    <img
+                      class="profile-image"
+                      src="./assets/images/big-profile.png"
+                      alt="big profile"
+                    />
+                    <div class="profile-balance">
+                      <img src="./assets/icons/gold-coins.svg" alt="" /> 900,34
+                    </div>
+                    <button class="profile-deposite-btn">
+                      Пополнить баланс
+                    </button>
+                  </div>
+                  <div class="profile-telegram">
+                    <p>Бонусы в телеграм!</p>
+                    <a href="">Перейти</a>
+                    <img
+                      src="./assets/icons/telegram-big-icon.svg"
+                      alt="tg-big"
+                    />
+                  </div>
+                  <div class="profile-level">
+                    <p>Уровень: Хищник</p>
+                    <a href="">Подробнее</a>
+                    <img
+                      src="./assets/icons/wolf-icon-big.svg"
+                      alt="wolf-icon"
+                    />
+                  </div>
+                  <div class="profile-statistic">
+                    <span>Всего игр</span>
+                    <p>1 132</p>
+                  </div>
+                  <div class="profile-statistic">
+                    <span>Выигрыши</span>
+                    <p>1 132</p>
+                  </div>
+                  <div class="profile-statistic">
+                    <span>Отыгрыш</span>
+                    <p>1 132</p>
+                  </div>
+                  <div class="profile-statistic">
+                    <span>Средняя ставка</span>
+                    <p>1 132</p>
+                  </div>
+                  <div class="profile-data-change">
+                    <p class="profile-data-change-title">
+                      Персональная информация
+                    </p>
+                    <div class="custom-input">
+                      <input type="text" value="Анжела" />
+                      <span class="inner-label">никнейм</span>
+                    </div>
+                    <div class="custom-input">
+                      <input type="text" value="Анжела@mail.ru" />
+                      <span class="inner-label">Почта</span>
+                    </div>
+                    <button class="btn-primary">Сохранить</button>
+                  </div>
+                  <div class="profile-gift">
+                    <p class="profile-gift-title">
+                      выполни условия <br />
+                      и получи до 100 ₽ на счет
+                    </p>
+                    <div class="progress-gift-wrapper">
+                      <div class="progress-label-wrapper">
+                        <span>0</span><span>25 000</span>
+                      </div>
+                      <div class="gift-progress-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="gift-value">
+                        <p>Депозит за месяц:</p>
+                        <span
+                          ><img
+                            src="./assets/icons/gold-coins.svg"
+                            alt="gold coins"
+                          />
+                          900,34</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="active-bonuses">
+                    <h3 class="active-bonuses-title">Активные бонусы</h3>
+                    <div class="active-bonuses-wrapper">
+                      <div class="active-bonuses-card">
+                        <div class="active-bonuses-card-header">
+                          <div class="active-bonuses-card-title">
+                            <span class="active-bonuses-card-icon"
+                              ><img src="./assets/icons/gift.svg" alt="gift"
+                            /></span>
+                            <p>75 FS + 25% <br />к депозиту</p>
+                          </div>
+                          <span class="active-bonuses-card-question"
+                            ><img
+                              src="./assets/icons/question-btn-icon.svg"
+                              alt=""
+                          /></span>
+                        </div>
+                        <p class="active-bonuses-card-subtitle">
+                          В игре: Zeus vs Hades — <br />
+                          Gods of War!
+                        </p>
+                        <button class="btn-primary">Активировать</button>
+                      </div>
+                      <div class="active-bonuses-card">
+                        <div class="active-bonuses-card-header">
+                          <div class="active-bonuses-card-title">
+                            <span class="active-bonuses-card-icon"
+                              ><img src="./assets/icons/gift.svg" alt="gift"
+                            /></span>
+                            <p>75 FS + 25% <br />к депозиту</p>
+                          </div>
+                          <span class="active-bonuses-card-question"
+                            ><img
+                              src="./assets/icons/question-btn-icon.svg"
+                              alt=""
+                          /></span>
+                        </div>
+                        <p class="active-bonuses-card-subtitle">
+                          В игре: Zeus vs Hades — <br />
+                          Gods of War!
+                        </p>
+                        <button class="btn-primary">Активировать</button>
+                      </div>
+                      <div class="active-bonuses-card">
+                        <div class="active-bonuses-card-header">
+                          <div class="active-bonuses-card-title">
+                            <span class="active-bonuses-card-icon"
+                              ><img src="./assets/icons/gift.svg" alt="gift"
+                            /></span>
+                            <p>75 FS + 25% <br />к депозиту</p>
+                          </div>
+                          <span class="active-bonuses-card-question"
+                            ><img
+                              src="./assets/icons/question-btn-icon.svg"
+                              alt=""
+                          /></span>
+                        </div>
+                        <p class="active-bonuses-card-subtitle">
+                          В игре: Zeus vs Hades — <br />
+                          Gods of War!
+                        </p>
+                        <button class="btn-primary">Активировать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer>
+                <div class="footer-wrapper">
+                  <div>
+                    <div>
+                      <a href="/"
+                        ><img src="./assets/images/logotype-dark.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="footer-nav">
+                    <a href="">Соглашение</a>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Контакты</a>
+                    <a href="">Поддержка</a>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-box">qweqweqweqwe</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

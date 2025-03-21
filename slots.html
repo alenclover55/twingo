@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <div class="app-wrapper">
+        <div class="header">
+          <div class="logo-online-wrapper">
+            <a href="/">
+              <img src="./assets/images/logotype-dark.svg" alt="logo" />
+            </a>
+            <div class="online-count">
+              <span class="online-outer">
+                <span class="online-inner"> </span>
+              </span>
+              <p>410</p>
+            </div>
+          </div>
+          <div class="nav">
+            <a class="nav-item" href="">Игры</a>
+            <a class="nav-item" href="">Бонусы</a>
+            <a class="nav-item" href="">Рефералы</a>
+            <a class="nav-item" href="">FAQ</a>
+            <a class="nav-item" href="">Поддержка</a>
+          </div>
+          <div class="auth-btns">
+            <button class="sign-in-btn">
+              <svg class="icon">
+                <use xlink:href="./assets/icons/icons.svg#lock-open"></use></svg
+              >Вход
+            </button>
+            <button class="sign-up-btn">
+              <svg class="icon">
+                <use href="./assets/icons/icons.svg#person-add"></use></svg
+              >Регистрация
+            </button>
+          </div>
+        </div>
+        <div class="main-app-wrapper">
+          <div class="sidebar">
+            <div class="sidebar-link-group">
+              <a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#slots-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#live-cards"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#dice-icon"></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#wheels-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+            </div>
+            <div class="sidebar-socials">
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div class="main slots-page">
+            <div class="container">
+              <div class="group-header">
+                <div class="group-title">
+                  <span class="group-icon">
+                    <img src="./assets/icons/slots-machine_icon.svg" alt=""
+                  /></span>
+                  <h3>Меню</h3>
+                </div>
+                <span class="menu-close-btn">
+                  <img src="./assets/icons/close.svg" alt="" />
+                </span>
+              </div>
+              <div class="slots-toolbar">
+                <div class="input-search">
+                  <img src="./assets/icons/search-icon.svg" alt="search" />
+                  <input type="text" />
+                </div>
+                <div class="custom-select-wrapper">
+                  <div class="custom-select-header">
+                    <div class="value-wrapper">
+                      <img src="./assets/icons/providers-icon.svg" alt="" />
+                      <p class="select-value">Провайдеры</p>
+                    </div>
+                    <span>
+                      <img src="./assets/icons/select-arrow.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="custom-select-body" style="display: none">
+                    <div class="provider-option" data-value="provider1">
+                      Провайдер 1
+                    </div>
+                    <div class="provider-option" data-value="provider2">
+                      Провайдер 2
+                    </div>
+                    <div class="provider-option" data-value="provider3">
+                      Провайдер 3
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-select-wrapper">
+                  <div class="custom-select-header">
+                    <div class="value-wrapper">
+                      <img src="./assets/icons/setting-icon.svg" alt="" />
+                      <p class="select-value">Провайдеры</p>
+                    </div>
+                    <span>
+                      <img src="./assets/icons/select-arrow.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="custom-select-body" style="display: none">
+                    <div class="provider-option" data-value="provider1">
+                      Провайдер 1
+                    </div>
+                    <div class="provider-option" data-value="provider2">
+                      Провайдер 2
+                    </div>
+                    <div class="provider-option" data-value="provider3">
+                      Провайдер 3
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slots-grid">
+                <a href=""
+                  ><img src="./assets/images/game1.png" alt="" />
+                  <div class="hover-slots">
+                    <div class="hover-slots-btn">
+                      <button>
+                        <img width="12" src="./assets/icons/play-icon.svg" alt="play" />
+                      </button>
+                    </div>
+                    <div class="hover-slots-title">
+                      <h3>Dog House</h3>
+                      <p>Pragmatic Play</p>
+                    </div>
+                  </div>
+                </a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
+                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+              </div>
+              <footer
+                <div class="footer-wrapper">
+                  <div>
+                    <div>
+                      <a href="/"
+                        ><img src="./assets/images/logotype-dark.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="footer-nav">
+                    <a href="">Соглашение</a>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Контакты</a>
+                    <a href="">Поддержка</a>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-box">qweqweqweqwe</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

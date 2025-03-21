@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <div class="app-wrapper">
+        <div class="header">
+          <div class="header-left">
+            <div class="logo-online-wrapper">
+              <a href="/">
+                <img src="./assets/images/logotype-dark.svg" alt="logo" />
+              </a>
+              <div class="online-count">
+                <span class="online-outer">
+                  <span class="online-inner"> </span>
+                </span>
+                <p>410</p>
+              </div>
+            </div>
+            <div class="nav">
+              <a class="nav-item" href="">Игры</a>
+              <a class="nav-item" href="">Бонусы</a>
+              <a class="nav-item" href="">Рефералы</a>
+              <a class="nav-item" href="">FAQ</a>
+              <a class="nav-item" href="">Поддержка</a>
+            </div>
+          </div>
+          <div class="auth-btns">
+            <button class="sign-in-btn">
+              <svg class="icon">
+                <use xlink:href="./assets/icons/icons.svg#lock-open"></use></svg
+              >Вход
+            </button>
+            <button class="sign-up-btn">
+              <svg class="icon">
+                <use href="./assets/icons/icons.svg#person-add"></use></svg
+              >Регистрация
+            </button>
+          </div>
+        </div>
+        <div class="main-app-wrapper">
+          <div class="sidebar">
+            <div class="sidebar-link-group">
+              <a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#slots-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#live-cards"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#dice-icon"></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#wheels-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+            </div>
+            <div class="sidebar-socials">
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#telegram-icon"></use></svg
+              ></a>
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#vk-icon"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div class="main">
+            <div class="container">
+              <div class="promo-main">
+                <div class="promo-main-card wide">
+                  <h3>Партнерская программа</h3>
+                  <p>
+                    Получай до 20% <br />
+                    от депозитов рефералов
+                  </p>
+                  <button>
+                    <img
+                      src="./assets/icons/icon-coins.svg"
+                      alt="coins"
+                    />Перейти
+                  </button>
+                </div>
+                <div class="promo-main-card fit">
+                  <h3>Подпишись на телеграм</h3>
+                  <p>
+                    И будь в курсе всех новостей,<br />
+                    розыгрышей и промокодов
+                  </p>
+                  <button>
+                    <img
+                      src="./assets/icons/telegram-icon.svg"
+                      alt="tg"
+                    />Подписаться
+                  </button>
+                </div>
+              </div>
+              <div class="original-games">
+                <h3 class="group-title">Оригинальные игры</h3>
+                <div class="original-games-wrapper">
+                  <div
+                    class="original-games-card"
+                    style="
+                      background-image: url('./assets/images/popular-bgs/dice-bg.jpeg');
+                    "
+                  >
+                    <p>Dice</p>
+                    <button>
+                      <img src="./assets/icons/arrow-cont.svg" alt="arrow" />
+                    </button>
+                  </div>
+                  <div
+                    class="original-games-card"
+                    style="
+                      background-image: url('./assets/images/popular-bgs/mines-bg.jpeg');
+                    "
+                  >
+                    <p>mines</p>
+                    <button>
+                      <img src="./assets/icons/arrow-cont.svg" alt="arrow" />
+                    </button>
+                  </div>
+                  <div
+                    class="original-games-card"
+                    style="
+                      background-image: url('./assets/images/popular-bgs/coinflip-bg.jpeg');
+                    "
+                  >
+                    <p>coinflip</p>
+                    <button>
+                      <img src="./assets/icons/arrow-cont.svg" alt="arrow" />
+                    </button>
+                  </div>
+                  <div
+                    class="original-games-card"
+                    style="
+                      background-image: url('./assets/images/popular-bgs/wheel-bg.jpeg');
+                    "
+                  >
+                    <p>Х100</p>
+                    <button>
+                      <img src="./assets/icons/arrow-cont.svg" alt="arrow" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="popular-slots">
+                <div class="group-header">
+                  <h3 class="group-title">Популярные слоты</h3>
+                  <a class="show-all-btn" href="">Показать все</a>
+                </div>
+                <div class="swiper popular-slots-wrapper">
+                  <div class="swiper-wrapper">
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game2.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game3.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game4.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game5.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game6.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game4.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game5.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game6.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="dealer-slots">
+                <div class="group-header">
+                  <h3 class="group-title">Оригинальные игры</h3>
+                  <a class="show-all-btn" href="">Показать все</a>
+                </div>
+                <div class="swiper dealer-slots-wrapper">
+                  <div class="swiper-wrapper">
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href="openSlot.html">
+                      <img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game2.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game3.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game1.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game4.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game5.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game6.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game4.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game5.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                    <a class="swiper-slide slot-card" href=""
+                      ><img src="./assets/images/game6.png" alt="" />
+                      <div class="hover-slots">
+                        <div class="hover-slots-btn">
+                          <button>
+                            <img
+                              src="./assets/icons/paly-game-icon.svg"
+                              alt=""
+                            />Play
+                          </button>
+                        </div>
+                        <div class="hover-slots-title">
+                          <h3>Dog House</h3>
+                          <p>Pragmatic Play</p>
+                        </div>
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="game-history-table">
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
+              </div>
+              <div class="providers">
+                <div class="group-header">
+                  <h3 class="group-title">Провайдеры</h3>
+                  <a class="show-all-btn">Показать все</a>
+                </div>
+                <div class="providers-wrapper">
+                  <a class="provider-card"
+                    ><img src="./assets/images/providers/betsoft.png" alt=""
+                  /></a>
+                  <a class="provider-card"
+                    ><img src="./assets/images/providers/playson.png" alt=""
+                  /></a>
+                  <a class="provider-card"
+                    ><img
+                      src="./assets/images/providers/pragmaticplay.png"
+                      alt=""
+                  /></a>
+                  <a class="provider-card"
+                    ><img src="./assets/images/providers/playngo.png" alt=""
+                  /></a>
+                </div>
+              </div>
+              <footer>
+                <div class="footer-wrapper">
+                  <div>
+                    <div>
+                      <a href="/"
+                        ><img src="./assets/images/logotype-dark.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="footer-nav">
+                    <a href="">Соглашение</a>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Контакты</a>
+                    <a href="">Поддержка</a>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-box">
+        <div class="chat-header">
+          <div class="group-header">
+            <div class="group-title">
+              <span class="group-icon">
+                <img src="./assets/icons/chat-icon.svg" alt="shield-icon"
+              /></span>
+              <h3>Чат</h3>
+            </div>
+            <div class="chat-header-btns">
+              <button class="rules-btn">Правила</button>
+              <button class="hide-btn">
+                <img src="./assets/icons/arrow-hide.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-body">
+          <div class="chat-item">
+            <img src="./assets/images/profile-img.png" alt="" />
+            <div>
+              <div class="message-header">
+                <p class="chat-nickname">Анжела</p>
+                <span class="chat-time">11:47</span>
+              </div>
+              <div class="message-value">
+                Привет, используйте мой промо H7JI-U396456!
+              </div>
+            </div>
+          </div>
+          <div class="chat-item">
+            <img src="./assets/images/profile-img.png" alt="" />
+            <div>
+              <div class="message-header">
+                <p class="chat-nickname">Анжела</p>
+                <span class="chat-time">11:47</span>
+              </div>
+              <div class="message-value">
+                Привет, используйте мой промо H7JI-U396456!
+              </div>
+            </div>
+          </div>
+          <div class="chat-item">
+            <img src="./assets/images/profile-img.png" alt="" />
+            <div>
+              <div class="message-header">
+                <p class="chat-nickname">Анжела</p>
+                <span class="chat-time">11:47</span>
+              </div>
+              <div class="message-value">
+                Привет, используйте мой промо H7JI-U396456!
+              </div>
+            </div>
+          </div>
+          <div class="chat-item">
+            <img src="./assets/images/profile-img.png" alt="" />
+            <div>
+              <div class="message-header">
+                <p class="chat-nickname">Анжела</p>
+                <span class="chat-time">11:47</span>
+              </div>
+              <div class="message-value">
+                Привет, используйте мой промо H7JI-U396456!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="Cообщение..." />
+          <div class="chat-input-btns">
+            <button class="smile-btn">
+              <svg class="icon">
+                <use href="./assets/icons/icons.svg#smile-icon"></use>
+              </svg>
+            </button>
+            <button class="send-btn">
+              <svg class="icon">
+                <use href="./assets/icons/icons.svg#telegram-icon"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
