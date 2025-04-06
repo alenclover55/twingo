@@ -171,6 +171,7 @@ $(document).ready(function () {
     }
   });
 });
+
 // $(document).ready(function () {
 //   // Обработчик клика на заголовок
 //   $(".wallet-select-header").on("click", function (e) {
@@ -467,10 +468,23 @@ $(".profile-menu-btn").click(() => {
   $(".profile-menu-inner").slideToggle();
   $(".profile-menu-inner").css("display", "flex");
 });
+$(document).ready(function () {
+  toastr.options = {
+    closeButton: true, // Кнопка закрытия
+    progressBar: true, // Прогресс-бар
+    timeOut: "100000", // Время отображения (мс)
+    extendedTimeOut: "1000", // Дополнительное время при наведении
+    positionClass: "toast-top-right", // Позиция уведомления
+  };
+});
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
 
   setTimeout(function () {
     loader.style.display = "none";
+
+    toastr.success(
+      "<span class='icon-notif'><img src='./assets/icons/wallet-icon.svg' alt='Иконка'></span>Ваш запрос выполнен успешно! <img src='./assets/icons/gold-coins.svg' alt='Иконка'>"
+    );
   }, 2000);
 });
