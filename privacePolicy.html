@@ -16,35 +16,41 @@
     <div class="app-layout">
       <div class="app-wrapper">
         <div class="header">
-          <div class="logo-online-wrapper">
-            <a href="/">
-              <img src="./assets/images/logotype-dark.svg" alt="logo" />
-            </a>
-            <div class="online-count">
-              <span class="online-outer">
-                <span class="online-inner"> </span>
-              </span>
-              <p>410</p>
+          <div class="header-wrapper">
+            <div class="header-left">
+              <div class="logo-online-wrapper">
+                <a href="/">
+                  <img src="./assets/images/logotype-dark.svg" alt="logo" />
+                </a>
+                <div class="online-count">
+                  <span class="online-outer">
+                    <span class="online-inner"> </span>
+                  </span>
+                  <p>410</p>
+                </div>
+              </div>
+              <div class="nav">
+                <a class="nav-item" href="">Игры</a>
+                <a class="nav-item" href="">Бонусы</a>
+                <a class="nav-item" href="">Рефералы</a>
+                <a class="nav-item" href="">FAQ</a>
+                <a class="nav-item" href="">Поддержка</a>
+              </div>
             </div>
-          </div>
-          <div class="nav">
-            <a class="nav-item" href="">Игры</a>
-            <a class="nav-item" href="">Бонусы</a>
-            <a class="nav-item" href="">Рефералы</a>
-            <a class="nav-item" href="">FAQ</a>
-            <a class="nav-item" href="">Поддержка</a>
-          </div>
-          <div class="auth-btns">
-            <button class="sign-in-btn">
-              <svg class="icon">
-                <use xlink:href="./assets/icons/icons.svg#lock-open"></use></svg
-              >Вход
-            </button>
-            <button class="sign-up-btn">
-              <svg class="icon">
-                <use href="./assets/icons/icons.svg#person-add"></use></svg
-              >Регистрация
-            </button>
+            <div class="auth-btns">
+              <button class="sign-in-btn">
+                <svg class="icon">
+                  <use
+                    xlink:href="./assets/icons/icons.svg#lock-open"
+                  ></use></svg
+                >Вход
+              </button>
+              <button class="sign-up-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#person-add"></use></svg
+                >Регистрация
+              </button>
+            </div>
           </div>
         </div>
         <div class="main-app-wrapper">
@@ -161,12 +167,14 @@
               </div>
               <footer>
                 <div class="footer-wrapper">
-                  <div>
-                    <div>
+                  <div class="footer-left">
+                    <div class="footer-logo-wrapper">
                       <a href="/"
                         ><img src="./assets/images/logotype-dark.svg" alt=""
                       /></a>
+                      <span class="age-alert"> 18+ </span>
                     </div>
+                    <p>Copyright © 2025 TwinGo. All rights reserved</p>
                   </div>
                   <div class="footer-nav">
                     <a href="">Соглашение</a>
@@ -180,7 +188,91 @@
           </div>
         </div>
       </div>
-      <div class="chat-box">qweqweqweqwe</div>
+      <div class="chat-box">
+        <div class="chat-header">
+          <div class="group-header">
+            <div class="group-title">
+              <span class="group-icon">
+                <img src="./assets/icons/chat-icon.svg" alt="shield-icon"
+              /></span>
+              <h3>Чат</h3>
+            </div>
+            <div class="chat-header-btns">
+              <button class="rules-btn">Правила</button>
+              <button class="hide-btn">
+                <img src="./assets/icons/arrow-hide.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-main">
+          <div class="chat-body">
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Cообщение..." />
+            <div class="chat-input-btns">
+              <button class="smile-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#smile-icon"></use>
+                </svg>
+              </button>
+              <button class="send-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#telegram-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>

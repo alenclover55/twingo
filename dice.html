@@ -11,48 +11,16 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
   </head>
   <body>
     <div class="app-layout">
       <div class="app-wrapper">
-        <div class="header">
-          <div class="header-wrapper">
-            <div class="header-left">
-              <div class="logo-online-wrapper">
-                <a href="/">
-                  <img src="./assets/images/logotype-dark.svg" alt="logo" />
-                </a>
-                <div class="online-count">
-                  <span class="online-outer">
-                    <span class="online-inner"> </span>
-                  </span>
-                  <p>410</p>
-                </div>
-              </div>
-              <div class="nav">
-                <a class="nav-item" href="">Игры</a>
-                <a class="nav-item" href="">Бонусы</a>
-                <a class="nav-item" href="">Рефералы</a>
-                <a class="nav-item" href="">FAQ</a>
-                <a class="nav-item" href="">Поддержка</a>
-              </div>
-            </div>
-            <div class="auth-btns">
-              <button class="sign-in-btn">
-                <svg class="icon">
-                  <use
-                    xlink:href="./assets/icons/icons.svg#lock-open"
-                  ></use></svg
-                >Вход
-              </button>
-              <button class="sign-up-btn">
-                <svg class="icon">
-                  <use href="./assets/icons/icons.svg#person-add"></use></svg
-                >Регистрация
-              </button>
-            </div>
-          </div>
-        </div>
         <div class="header">
           <div class="header-wrapper">
             <div class="header-left">
@@ -122,115 +90,94 @@
           </div>
         </div>
         <div class="main-app-wrapper">
-          <div class="main slots-page">
+          <div class="main dice-page">
             <div class="container">
-              <div class="group-header">
-                <div class="group-title">
-                  <span class="btn-back">
-                    <img src="./assets/icons/back-icon.svg" alt="" />
-                  </span>
-                  <span class="group-icon">
-                    <img src="./assets/icons/slots-machine_icon.svg" alt=""
-                  /></span>
-                  <h3>Меню</h3>
-                </div>
+              <div class="group-title">
+                <span class="btn-back">
+                  <img src="./assets/icons/back-icon.svg" alt="" />
+                </span>
+                <span class="group-icon">
+                  <svg class="icon">
+                    <use href="./assets/icons/icons.svg#dice-icon"></use>
+                  </svg>
+                </span>
+                <h3>Dice</h3>
               </div>
-              <div class="slots-toolbar">
-                <div class="input-search">
-                  <img src="./assets/icons/search-icon.svg" alt="search" />
-                  <input type="text" />
+              <div class="dice-wrapper">
+                <div class="dice-parameters">
+                  <div class="optional-input">
+                    <div class="optional-input-wrapper">
+                      <img src="./assets/icons/gold-coins.svg" alt="" />
+                      <input type="text" value="1.00" />
+                    </div>
+                    <div class="optional-input-btns">
+                      <button>Min</button>
+                      <button>Max</button>
+                      <button>X2</button>
+                    </div>
+                  </div>
+                  <div class="game-input">
+                    <p>Процент</p>
+                    <div><input type="text" placeholder="80.00" /></div>
+                  </div>
+                  <div class="game-input">
+                    <p>Выигрыш</p>
+                    <div>
+                      <img
+                        src="./assets/icons/gold-coins.svg"
+                        alt="gold-coins"
+                      /><input value="10.00" type="text" />
+                    </div>
+                  </div>
+                  <div class="dice-btns">
+                    <button class="btn-third">Меньше</button>
+                    <button class="btn-secondary">Больше</button>
+                  </div>
                 </div>
-                <div class="custom-select-wrapper">
-                  <div class="custom-select-header">
-                    <div class="value-wrapper">
-                      <img src="./assets/icons/providers-icon.svg" alt="" />
-                      <p class="select-value">Провайдеры</p>
-                    </div>
-                    <span>
-                      <img src="./assets/icons/select-arrow.svg" alt="" />
-                    </span>
-                  </div>
-                  <div class="custom-select-body" style="display: none">
-                    <div class="custom-select-option" data-value="provider1">
-                      Провайдер 1
-                    </div>
-                    <div class="custom-select-option" data-value="provider2">
-                      Провайдер 2
-                    </div>
-                    <div class="custom-select-option" data-value="provider3">
-                      Провайдер 3
-                    </div>
-                  </div>
-                </div>
-                <div class="custom-select-wrapper">
-                  <div class="custom-select-header">
-                    <div class="value-wrapper">
-                      <img src="./assets/icons/setting-icon.svg" alt="" />
-                      <p class="select-value">Популярное</p>
-                    </div>
-                    <span>
-                      <img src="./assets/icons/select-arrow.svg" alt="" />
-                    </span>
-                  </div>
-                  <div class="custom-select-body" style="display: none">
-                    <div class="custom-select-option" data-value="provider1">
-                      Популярное
-                    </div>
-                    <div class="custom-select-option" data-value="provider2">
-                      Новинки
-                    </div>
-                    <div class="custom-select-option" data-value="provider3">
-                      Топ выигрышей
+                <div class="dice-game">
+                  <div class="dice-result">13.20</div>
+                  <div id="dice-range" class="dice-range-midlight">
+                    <div class="dice-range-light">
+                      <div class="dice-range">
+                        <span class="game-state-qube">
+                          <img src="../assets/images/rotated-qube.svg" alt="" />
+                          <span>35.32</span>
+                        </span>
+                        <input id="dice-range" type="range" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="slots-grid">
-                <a href=""
-                  ><img src="./assets/images/game1.png" alt="" />
-                  <div class="hover-slots">
-                    <div class="hover-slots-btn">
-                      <button>
-                        <img
-                          width="12"
-                          src="./assets/icons/play-icon.svg"
-                          alt="play"
-                        />
-                      </button>
-                    </div>
-                    <div class="hover-slots-title">
-                      <h3>Dog House</h3>
-                      <p>Pragmatic Play</p>
-                    </div>
-                  </div>
-                </a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+              <div class="game-history-table">
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
               </div>
               <footer>
                 <div class="footer-wrapper">
@@ -342,6 +289,13 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      $("#dice-range").ionRangeSlider({
+        min: 0,
+        max: 100,
+        grid: true,
+      });
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>

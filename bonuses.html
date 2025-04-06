@@ -15,88 +15,247 @@
   <body>
     <div class="app-layout">
       <div class="app-wrapper">
-        <div class="header">
-          <div class="logo-online-wrapper">
-            <a href="/">
-              <img src="./assets/images/logotype-dark.svg" alt="logo" />
-            </a>
-            <div class="online-count">
-              <span class="online-outer">
-                <span class="online-inner"> </span>
-              </span>
-              <p>410</p>
+        <div class="header logined">
+          <div class="header-wrapper">
+            <div class="header-left">
+              <div class="logo-online-wrapper">
+                <a class="logo" href="/">
+                  <img src="./assets/images/logotype-dark.svg" alt="logo" />
+                </a>
+                <a class="logo-mobile" href=""
+                  ><img width="36" src="./assets/icons/loading-icon.svg" alt=""
+                /></a>
+                <div class="online-count">
+                  <span class="online-outer">
+                    <span class="online-inner"> </span>
+                  </span>
+                  <p>410</p>
+                </div>
+              </div>
+              <div class="nav">
+                <a class="nav-item" href="">Игры</a>
+                <a class="nav-item" href="">Бонусы</a>
+                <a class="nav-item" href="">Рефералы</a>
+                <a class="nav-item" href="">FAQ</a>
+                <a class="nav-item" href="">Поддержка</a>
+              </div>
+            </div>
+            <div class="profile-header-info">
+              <div class="profile-balance-wrapper">
+                <p><img src="./assets/icons/gold-coins.svg" alt="" />900,34</p>
+                <button class="btn-third">
+                  <img src="./assets/icons/wallet-icon.svg" alt="" /><span
+                    >Кошелек</span
+                  >
+                </button>
+              </div>
+              <div class="profile-header-wrapper">
+                <img
+                  class="header-profile-img"
+                  src="./assets/images/profile-img.png"
+                  alt=""
+                />
+                <button class="profile-menu-btn">
+                  <img src="./assets/icons/select-arrow.svg" alt="" />
+                </button>
+                <div class="profile-menu-inner">
+                  <p>ID: 239432039</p>
+                  <a href="">Профиль</a>
+                  <a href="">Розыгрыш</a>
+                  <a href="">Выйти</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="nav">
-            <a class="nav-item" href="">Игры</a>
-            <a class="nav-item" href="">Бонусы</a>
-            <a class="nav-item" href="">Рефералы</a>
-            <a class="nav-item" href="">FAQ</a>
-            <a class="nav-item" href="">Поддержка</a>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-link-group">
+            <a href="" class="sidebar-link"
+              ><svg class="icon">
+                <use href="./assets/icons/icons.svg#slots-icon"></use></svg></a
+            ><a href="" class="sidebar-link"
+              ><svg class="icon">
+                <use href="./assets/icons/icons.svg#live-cards"></use></svg></a
+            ><a href="" class="sidebar-link"
+              ><svg class="icon">
+                <use href="./assets/icons/icons.svg#dice-icon"></use></svg></a
+            ><a href="" class="sidebar-link"
+              ><svg class="icon">
+                <use href="./assets/icons/icons.svg#wheels-icon"></use></svg></a
+            ><a href="" class="sidebar-link"
+              ><svg class="icon">
+                <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+            ></a>
           </div>
-          <div class="auth-btns">
-            <button class="sign-in-btn">
-              <svg class="icon">
-                <use xlink:href="./assets/icons/icons.svg#lock-open"></use></svg
-              >Вход
-            </button>
-            <button class="sign-up-btn">
-              <svg class="icon">
-                <use href="./assets/icons/icons.svg#person-add"></use></svg
-              >Регистрация
-            </button>
+          <div class="sidebar-socials">
+            <a class="sidebar-link" href=""
+              ><svg class="icon">
+                <use href="./assets/icons/icons.svg#telegram-icon"></use></svg
+            ></a>
+            <a class="sidebar-link" href=""
+              ><svg class="icon">
+                <use href="./assets/icons/icons.svg#vk-icon"></use></svg
+            ></a>
           </div>
         </div>
         <div class="main-app-wrapper">
-          <div class="sidebar">
-            <div class="sidebar-link-group">
-              <a href="" class="sidebar-link"
-                ><svg class="icon">
-                  <use
-                    href="./assets/icons/icons.svg#slots-icon"
-                  ></use></svg></a
-              ><a href="" class="sidebar-link"
-                ><svg class="icon">
-                  <use
-                    href="./assets/icons/icons.svg#live-cards"
-                  ></use></svg></a
-              ><a href="" class="sidebar-link"
-                ><svg class="icon">
-                  <use href="./assets/icons/icons.svg#dice-icon"></use></svg></a
-              ><a href="" class="sidebar-link"
-                ><svg class="icon">
-                  <use
-                    href="./assets/icons/icons.svg#wheels-icon"
-                  ></use></svg></a
-              ><a href="" class="sidebar-link"
-                ><svg class="icon">
-                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
-              ></a>
-            </div>
-            <div class="sidebar-socials">
-              <a class="sidebar-link" href=""
-                ><svg class="icon">
-                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
-              ></a>
-              <a class="sidebar-link" href=""
-                ><svg class="icon">
-                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
-              ></a>
-            </div>
-          </div>
           <div class="main bonus-page">
             <div class="container">
               <div class="group-header">
                 <div class="group-title">
+                  <span class="btn-back">
+                    <img src="./assets/icons/back-icon.svg" alt="" />
+                  </span>
                   <span class="group-icon">
                     <img src="./assets/icons/gift.svg" alt="shield-icon"
                   /></span>
                   <h3>Программа лояльности</h3>
                 </div>
               </div>
-              <div class="swiper levels-slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide level-card wolf-level">
+              <div class="levels-slider-wrapper">
+                <button class="levels-slider-btn levels-slider-btn-prev">
+                  <img
+                    style="transform: rotate(180deg)"
+                    src="./assets/icons/fade-slider-arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <div class="swiper levels-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide level-card wolf-level">
+                      <h3>Волк</h3>
+                      <p>1% кэшбека</p>
+                      <img
+                        class="level-card-main-icon"
+                        src="./assets/icons/account-progress-icons/wolf-level-icon-big.svg"
+                        alt=""
+                      />
+                      <div class="level-card-progress-wrapper">
+                        <div class="level-card-progress">
+                          <div class="level-card-progress-inner"></div>
+                        </div>
+                        <div class="labels-card-progress">
+                          <span>11.50 </span><span>100</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide level-card wild-level">
+                      <h3>Хищник</h3>
+                      <p>2% кэшбека</p>
+                      <img
+                        class="level-card-main-icon"
+                        src="./assets/icons/account-progress-icons/lion-level-icon-big.svg"
+                        alt=""
+                      />
+                      <div class="level-required">
+                        Необходимо:
+                        <span
+                          ><img
+                            src="./assets/icons/account-progress-icons/wolf-icon.svg"
+                            alt=""
+                          />Волк</span
+                        >
+                      </div>
+                    </div>
+                    <div class="swiper-slide level-card premium-level">
+                      <h3>Премиум</h3>
+                      <p>2% кэшбека</p>
+                      <img
+                        class="level-card-main-icon"
+                        src="./assets/icons/account-progress-icons/premium-level-icon-big.svg"
+                        alt=""
+                      />
+                      <div class="level-required">
+                        Необходимо:
+                        <span
+                          ><img
+                            src="./assets/icons/account-progress-icons/lion-icon.svg"
+                            alt=""
+                          />Хищник</span
+                        >
+                      </div>
+                    </div>
+                    <div class="swiper-slide level-card alfa-level">
+                      <h3>Альфа</h3>
+                      <p>4% кэшбека</p>
+                      <img
+                        class="level-card-main-icon"
+                        src="./assets/icons/account-progress-icons/alfa-level-icon-big.svg"
+                        alt=""
+                      />
+                      <div class="level-required">
+                        Необходимо:
+                        <span
+                          ><img
+                            src="./assets/icons/account-progress-icons/premium-icon.svg"
+                            alt=""
+                          />Премиум</span
+                        >
+                      </div>
+                    </div>
+                    <div class="swiper-slide level-card vip-level">
+                      <h3>VIP</h3>
+                      <p>5% кэшбека</p>
+                      <img
+                        class="level-card-main-icon"
+                        src="./assets/icons/account-progress-icons/vip-level-icon-big.svg"
+                        alt=""
+                      />
+                      <div class="level-required">
+                        Необходимо:
+                        <span
+                          ><img
+                            src="./assets/icons/account-progress-icons/alfa-icon.svg"
+                            alt=""
+                          />Альфа</span
+                        >
+                      </div>
+                    </div>
+                    <div class="swiper-slide level-card profi-level">
+                      <h3>Профи</h3>
+                      <p>7% кэшбека</p>
+                      <img
+                        class="level-card-main-icon"
+                        src="./assets/icons/account-progress-icons/profi-level-icon-big.svg"
+                        alt=""
+                      />
+                      <div class="level-required">
+                        Необходимо:
+                        <span
+                          ><img
+                            src="./assets/icons/account-progress-icons/vip-icon.svg"
+                            alt=""
+                          />VIP</span
+                        >
+                      </div>
+                    </div>
+                    <div class="swiper-slide level-card legend-level">
+                      <h3>Легенда</h3>
+                      <p>9% кэшбека</p>
+                      <img
+                        class="level-card-main-icon"
+                        src="./assets/icons/account-progress-icons/legend-level-icon-big.svg"
+                        alt=""
+                      />
+                      <div class="level-required">
+                        Необходимо:
+                        <span
+                          ><img
+                            src="./assets/icons/account-progress-icons/profi-icon.svg"
+                            alt=""
+                          />Профи</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="levels-slider-btn levels-slider-btn-next">
+                  <img src="./assets/icons/fade-slider-arrow.svg" alt="" />
+                </button>
+              </div>
+              <div>
+                <div class="levels-grid">
+                  <div class="level-card wolf-level">
                     <h3>Волк</h3>
                     <p>1% кэшбека</p>
                     <img
@@ -113,7 +272,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide level-card wild-level">
+                  <div class="level-card wild-level">
                     <h3>Хищник</h3>
                     <p>2% кэшбека</p>
                     <img
@@ -131,7 +290,7 @@
                       >
                     </div>
                   </div>
-                  <div class="swiper-slide level-card premium-level">
+                  <div class="level-card premium-level">
                     <h3>Премиум</h3>
                     <p>2% кэшбека</p>
                     <img
@@ -149,7 +308,7 @@
                       >
                     </div>
                   </div>
-                  <div class="swiper-slide level-card alfa-level">
+                  <div class="level-card alfa-level">
                     <h3>Альфа</h3>
                     <p>4% кэшбека</p>
                     <img
@@ -167,7 +326,7 @@
                       >
                     </div>
                   </div>
-                  <div class="swiper-slide level-card vip-level">
+                  <div class="level-card vip-level">
                     <h3>VIP</h3>
                     <p>5% кэшбека</p>
                     <img
@@ -185,7 +344,7 @@
                       >
                     </div>
                   </div>
-                  <div class="swiper-slide level-card profi-level">
+                  <div class="level-card profi-level">
                     <h3>Профи</h3>
                     <p>7% кэшбека</p>
                     <img
@@ -203,7 +362,7 @@
                       >
                     </div>
                   </div>
-                  <div class="swiper-slide level-card legend-level">
+                  <div class="level-card legend-level">
                     <h3>Легенда</h3>
                     <p>9% кэшбека</p>
                     <img
@@ -227,9 +386,11 @@
                 <div class="activate-promo">
                   <div class="group-title">
                     <span class="group-icon">
-                      <img src="./assets/icons/gift.svg" alt="shield-icon"
+                      <img
+                        src="./assets/icons/cupone-icon.svg"
+                        alt="shield-icon"
                     /></span>
-                    <h3>Программа лояльности</h3>
+                    <h3>Активация промокода</h3>
                   </div>
                   <div class="activate-promo-input">
                     <div class="custom-input">
@@ -242,32 +403,36 @@
                   <div class="group-header">
                     <div class="group-title">
                       <span class="group-icon">
-                        <img src="./assets/icons/gift.svg" alt="shield-icon"
+                        <img
+                          src="./assets/icons/diamond-icon.svg"
+                          alt="shield-icon"
                       /></span>
                       <h3>Ежедневный бонус</h3>
                     </div>
                     <p class="bonus-count">
-                      25
                       <span
                         ><img src="./assets/icons/gold-coins.svg" alt=""
                       /></span>
+                      25
                     </p>
                   </div>
-                  <button>Забрать</button>
+                  <button class="btn-fouth">Забрать</button>
                 </div>
                 <div class="cash-back">
                   <div class="group-header">
                     <div class="group-title">
                       <span class="group-icon">
-                        <img src="./assets/icons/gift.svg" alt="shield-icon"
+                        <img
+                          src="./assets/icons/cash-back-icon.svg"
+                          alt="cash-back"
                       /></span>
-                      <h3>Ежедневный бонус</h3>
+                      <h3>Кэшбек</h3>
                     </div>
                     <p class="bonus-count">
-                      25
                       <span
                         ><img src="./assets/icons/gold-coins.svg" alt=""
                       /></span>
+                      25
                     </p>
                   </div>
                   <button class="btn-primary">Получить</button>
@@ -276,15 +441,18 @@
                   <div class="group-header">
                     <div class="group-title">
                       <span class="group-icon">
-                        <img src="./assets/icons/gift.svg" alt="shield-icon"
-                      /></span>
-                      <h3>Ежедневный бонус</h3>
+                        <svg class="icon">
+                          <use
+                            href="./assets/icons/icons.svg#telegram-icon"
+                          ></use></svg
+                      ></span>
+                      <h3>Бонус за подписку</h3>
                     </div>
                     <p class="bonus-count">
-                      25
                       <span
                         ><img src="./assets/icons/gold-coins.svg" alt=""
                       /></span>
+                      25
                     </p>
                   </div>
                   <button class="btn-primary">Получить</button>
@@ -293,29 +461,32 @@
                   <div class="group-header">
                     <div class="group-title">
                       <span class="group-icon">
-                        <img src="./assets/icons/gift.svg" alt="shield-icon"
-                      /></span>
-                      <h3>Ежедневный бонус</h3>
+                        <svg class="icon">
+                          <use href="./assets/icons/icons.svg#vk-icon"></use>
+                        </svg>
+                      </span>
+                      <h3>Бонус за подписку</h3>
                     </div>
                     <p class="bonus-count">
-                      25
                       <span
                         ><img src="./assets/icons/gold-coins.svg" alt=""
                       /></span>
+                      25
                     </p>
                   </div>
                   <button class="btn-primary">Получить</button>
                 </div>
               </div>
-
               <footer>
                 <div class="footer-wrapper">
-                  <div>
-                    <div>
+                  <div class="footer-left">
+                    <div class="footer-logo-wrapper">
                       <a href="/"
                         ><img src="./assets/images/logotype-dark.svg" alt=""
                       /></a>
+                      <span class="age-alert"> 18+ </span>
                     </div>
+                    <p>Copyright © 2025 TwinGo. All rights reserved</p>
                   </div>
                   <div class="footer-nav">
                     <a href="">Соглашение</a>
@@ -329,7 +500,94 @@
           </div>
         </div>
       </div>
-      <div class="chat-box">qweqweqweqwe</div>
+      <div class="chat-box">
+        <div class="chat-header">
+          <div class="group-header">
+            <div class="group-title">
+              <span class="btn-back">
+                <img src="./assets/icons/back-icon.svg" alt="" />
+              </span>
+              <span class="group-icon">
+                <img src="./assets/icons/chat-icon.svg" alt="shield-icon"
+              /></span>
+              <h3>Чат</h3>
+            </div>
+            <div class="chat-header-btns">
+              <button class="rules-btn">Правила</button>
+              <button class="hide-btn">
+                <img src="./assets/icons/arrow-hide.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-main">
+          <div class="chat-body">
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Cообщение..." />
+            <div class="chat-input-btns">
+              <button class="smile-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#smile-icon"></use>
+                </svg>
+              </button>
+              <button class="send-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#telegram-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>

@@ -53,44 +53,6 @@
             </div>
           </div>
         </div>
-        <div class="header">
-          <div class="header-wrapper">
-            <div class="header-left">
-              <div class="logo-online-wrapper">
-                <a href="/">
-                  <img src="./assets/images/logotype-dark.svg" alt="logo" />
-                </a>
-                <div class="online-count">
-                  <span class="online-outer">
-                    <span class="online-inner"> </span>
-                  </span>
-                  <p>410</p>
-                </div>
-              </div>
-              <div class="nav">
-                <a class="nav-item" href="">Игры</a>
-                <a class="nav-item" href="">Бонусы</a>
-                <a class="nav-item" href="">Рефералы</a>
-                <a class="nav-item" href="">FAQ</a>
-                <a class="nav-item" href="">Поддержка</a>
-              </div>
-            </div>
-            <div class="auth-btns">
-              <button class="sign-in-btn">
-                <svg class="icon">
-                  <use
-                    xlink:href="./assets/icons/icons.svg#lock-open"
-                  ></use></svg
-                >Вход
-              </button>
-              <button class="sign-up-btn">
-                <svg class="icon">
-                  <use href="./assets/icons/icons.svg#person-add"></use></svg
-                >Регистрация
-              </button>
-            </div>
-          </div>
-        </div>
         <div class="sidebar">
           <div class="sidebar-link-group">
             <a href="" class="sidebar-link"
@@ -122,115 +84,90 @@
           </div>
         </div>
         <div class="main-app-wrapper">
-          <div class="main slots-page">
+          <div class="main coinflip-page">
             <div class="container">
-              <div class="group-header">
-                <div class="group-title">
-                  <span class="btn-back">
-                    <img src="./assets/icons/back-icon.svg" alt="" />
-                  </span>
-                  <span class="group-icon">
-                    <img src="./assets/icons/slots-machine_icon.svg" alt=""
-                  /></span>
-                  <h3>Меню</h3>
+              <div class="group-title">
+                <span class="btn-back">
+                  <img src="./assets/icons/back-icon.svg" alt="" />
+                </span>
+                <span class="group-icon">
+                  <img src="./assets/icons/coinflip-icon.svg" alt="" />
+                </span>
+                <h3>Coinflip</h3>
+              </div>
+              <div class="coinflip-wrapper">
+                <div class="coinflip-parameters">
+                  <div class="optional-input">
+                    <div class="optional-input-wrapper">
+                      <img src="./assets/icons/gold-coins.svg" alt="" />
+                      <input type="text" value="1.00" />
+                    </div>
+                    <div class="optional-input-btns">
+                      <button>5</button>
+                      <button>10</button>
+                      <button>100</button>
+                      <button>X2</button>
+                    </div>
+                  </div>
+                  <div class="coinflip-inputs">
+                    <div class="custom-input">
+                      <input type="text" value="1" />
+                      <span class="inner-label">Серия</span>
+                    </div>
+                    <div class="custom-input">
+                      <input type="text" value="x2.0" />
+                      <span class="inner-label">Коэфф</span>
+                    </div>
+                  </div>
+                  <button class="btn-secondary">Начать игру</button>
+                </div>
+                <div class="coinflip-game">
+                  <img
+                    class="lateral-coin"
+                    src="./assets/icons/coin-orange.svg"
+                    alt=""
+                  />
+                  <img
+                    class="central-coin"
+                    src="./assets/icons/coin-orange.svg"
+                    alt=""
+                  />
+                  <img
+                    class="lateral-coin"
+                    src="./assets/icons/coin-blue.svg"
+                    alt=""
+                  />
                 </div>
               </div>
-              <div class="slots-toolbar">
-                <div class="input-search">
-                  <img src="./assets/icons/search-icon.svg" alt="search" />
-                  <input type="text" />
+              <div class="game-history-table">
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
                 </div>
-                <div class="custom-select-wrapper">
-                  <div class="custom-select-header">
-                    <div class="value-wrapper">
-                      <img src="./assets/icons/providers-icon.svg" alt="" />
-                      <p class="select-value">Провайдеры</p>
-                    </div>
-                    <span>
-                      <img src="./assets/icons/select-arrow.svg" alt="" />
-                    </span>
-                  </div>
-                  <div class="custom-select-body" style="display: none">
-                    <div class="custom-select-option" data-value="provider1">
-                      Провайдер 1
-                    </div>
-                    <div class="custom-select-option" data-value="provider2">
-                      Провайдер 2
-                    </div>
-                    <div class="custom-select-option" data-value="provider3">
-                      Провайдер 3
-                    </div>
-                  </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
                 </div>
-                <div class="custom-select-wrapper">
-                  <div class="custom-select-header">
-                    <div class="value-wrapper">
-                      <img src="./assets/icons/setting-icon.svg" alt="" />
-                      <p class="select-value">Популярное</p>
-                    </div>
-                    <span>
-                      <img src="./assets/icons/select-arrow.svg" alt="" />
-                    </span>
-                  </div>
-                  <div class="custom-select-body" style="display: none">
-                    <div class="custom-select-option" data-value="provider1">
-                      Популярное
-                    </div>
-                    <div class="custom-select-option" data-value="provider2">
-                      Новинки
-                    </div>
-                    <div class="custom-select-option" data-value="provider3">
-                      Топ выигрышей
-                    </div>
-                  </div>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
                 </div>
-              </div>
-              <div class="slots-grid">
-                <a href=""
-                  ><img src="./assets/images/game1.png" alt="" />
-                  <div class="hover-slots">
-                    <div class="hover-slots-btn">
-                      <button>
-                        <img
-                          width="12"
-                          src="./assets/icons/play-icon.svg"
-                          alt="play"
-                        />
-                      </button>
-                    </div>
-                    <div class="hover-slots-title">
-                      <h3>Dog House</h3>
-                      <p>Pragmatic Play</p>
-                    </div>
-                  </div>
-                </a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+                <div class="game-history-item">
+                  <p>Crash</p>
+                  <p>Анжела</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                  <p>3.45х</p>
+                  <p><img src="./assets/icons/gold-coins.svg" alt="" />1 150</p>
+                </div>
               </div>
               <footer>
                 <div class="footer-wrapper">

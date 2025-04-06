@@ -1,0 +1,48 @@
+<svg width="197.847656" height="204.124756" viewBox="0 0 197.848 204.125" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_9_8789_dd" x="0.000000" y="6.216492" width="197.785156" height="197.908264" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="3.89353"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.051 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<filter id="filter_9_8790_dd" x="0.062500" y="0.000000" width="197.785156" height="197.908264" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="3.89353"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.051 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+		<radialGradient gradientTransform="translate(98.8934 105.171) rotate(90) scale(156.625 156.518)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_9_8789_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.355000" stop-color="#C98345"/>
+			<stop offset="1.000000" stop-color="#FF3300"/>
+		</radialGradient>
+		<radialGradient gradientTransform="translate(98.9559 98.9541) rotate(90) scale(156.625 156.518)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_9_8790_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.520000" stop-color="#F3A967"/>
+			<stop offset="1.000000" stop-color="#FF6900"/>
+		</radialGradient>
+		<radialGradient gradientTransform="translate(98.9538 98.9541) rotate(90) scale(143.573 143.474)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_9_8791_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.195000" stop-color="#FFCDA2"/>
+			<stop offset="0.629826" stop-color="#E95100"/>
+		</radialGradient>
+	</defs>
+	<g filter="url(#filter_9_8789_dd)">
+		<ellipse id="Ellipse 149" cx="98.894531" cy="105.170593" rx="87.213753" ry="87.273537" fill="url(#paint_radial_9_8789_0)" fill-opacity="1.000000"/>
+	</g>
+	<g filter="url(#filter_9_8790_dd)">
+		<ellipse id="Ellipse 145" cx="98.957031" cy="98.954102" rx="87.213753" ry="87.273537" fill="url(#paint_radial_9_8790_0)" fill-opacity="1.000000"/>
+	</g>
+	<ellipse id="Ellipse 152" cx="98.953125" cy="98.954102" rx="79.945938" ry="80.000748" fill="url(#paint_radial_9_8791_0)" fill-opacity="1.000000"/>
+	<ellipse id="Ellipse 152" cx="98.953125" cy="98.954102" rx="80.335289" ry="80.390099" stroke="#FFA556" stroke-opacity="0.810000" stroke-width="0.778705"/>
+	<path id="Vector" d="M113.59 73.29C114.3 71.63 113.77 69.7 112.32 68.63C110.86 67.56 108.87 67.66 107.51 68.85L76.65 95.97C75.44 97.04 75.01 98.75 75.58 100.25C76.14 101.75 77.59 102.77 79.19 102.77L92.63 102.77L83.36 124.49C82.65 126.15 83.18 128.09 84.64 129.15C86.1 130.22 88.09 130.12 89.45 128.93L120.31 101.81C121.51 100.74 121.94 99.04 121.38 97.53C120.81 96.03 119.38 95.03 117.77 95.03L104.32 95.03L113.59 73.29Z" fill="#F07832" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>

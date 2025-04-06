@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <div class="app-wrapper">
+        <div class="header">
+          <div class="header-wrapper">
+            <div class="header-left">
+              <div class="logo-online-wrapper">
+                <a href="/">
+                  <img src="./assets/images/logotype-dark.svg" alt="logo" />
+                </a>
+                <div class="online-count">
+                  <span class="online-outer">
+                    <span class="online-inner"> </span>
+                  </span>
+                  <p>410</p>
+                </div>
+              </div>
+              <div class="nav">
+                <a class="nav-item" href="">Игры</a>
+                <a class="nav-item" href="">Бонусы</a>
+                <a class="nav-item" href="">Рефералы</a>
+                <a class="nav-item" href="">FAQ</a>
+                <a class="nav-item" href="">Поддержка</a>
+              </div>
+            </div>
+            <div class="auth-btns">
+              <button class="sign-in-btn">
+                <svg class="icon">
+                  <use
+                    xlink:href="./assets/icons/icons.svg#lock-open"
+                  ></use></svg
+                >Вход
+              </button>
+              <button class="sign-up-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#person-add"></use></svg
+                >Регистрация
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="main-app-wrapper">
+          <div class="sidebar">
+            <div class="sidebar-link-group">
+              <a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#slots-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#live-cards"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#dice-icon"></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use
+                    href="./assets/icons/icons.svg#wheels-icon"
+                  ></use></svg></a
+              ><a href="" class="sidebar-link"
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+            </div>
+            <div class="sidebar-socials">
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+              <a class="sidebar-link" href=""
+                ><svg class="icon">
+                  <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div class="main raffle-wheel-page">
+            <div class="container">
+              <div class="group-title">
+                <span class="btn-back">
+                  <img src="./assets/icons/back-icon.svg" alt="" />
+                </span>
+                <span class="group-icon">
+                  <img src="./assets/icons/clover-icon.svg" alt="" />
+                </span>
+                <h3>Колесо розыгрышей</h3>
+              </div>
+              <div class="raffle-create-block">
+                <p>Запусти свой розыгрыш!</p>
+                <button class="btn-fouth create-raffle-btn">Создать</button>
+              </div>
+              <div class="raffle-table-nav">
+                <button class="active">Активные розыгрыши</button>
+                <button>Мои розыгрыши</button>
+              </div>
+              <div class="referal-table">
+                <div class="referal-table-row">
+                  <div>
+                    <span>ID: 239432039</span>
+                    <p class="from-nickname">От Анжелы</p>
+                  </div>
+                  <div>
+                    <span>#121 на сумму</span>
+                    <p>
+                      <img src="./assets/icons/coin-white.svg" alt="" />1 000
+                    </p>
+                  </div>
+                  <div>
+                    <span>Призовых мест</span>
+                    <p><img src="./assets/icons/crown-icon.svg" alt="" />6</p>
+                  </div>
+                  <div>
+                    <span>Активно до:</span>
+                    <p>
+                      <img src="./assets/icons/rollback-icon.svg" alt="" />02.02
+                      08:34
+                    </p>
+                  </div>
+                  <div class="referal-table-row-right">
+                    <p><img src="./assets/icons/person-icon.svg" alt="" />11</p>
+                    <button>Результаты</button>
+                  </div>
+                </div>
+                <div class="referal-table-row">
+                  <div>
+                    <span>ID: 239432039</span>
+                    <p class="from-nickname">От Анжелы</p>
+                  </div>
+                  <div>
+                    <span>#121 на сумму</span>
+                    <p>
+                      <img src="./assets/icons/coin-white.svg" alt="" />1 000
+                    </p>
+                  </div>
+                  <div>
+                    <span>Призовых мест</span>
+                    <p><img src="./assets/icons/crown-icon.svg" alt="" />6</p>
+                  </div>
+                  <div>
+                    <span>Активно до:</span>
+                    <p>
+                      <img src="./assets/icons/rollback-icon.svg" alt="" />02.02
+                      08:34
+                    </p>
+                  </div>
+                  <div class="referal-table-row-right">
+                    <p><img src="./assets/icons/person-icon.svg" alt="" />11</p>
+                    <button>Результаты</button>
+                  </div>
+                </div>
+                <div class="referal-table-row">
+                  <div>
+                    <span>ID: 239432039</span>
+                    <p class="from-nickname">От Анжелы</p>
+                  </div>
+                  <div>
+                    <span>#121 на сумму</span>
+                    <p>
+                      <img src="./assets/icons/coin-white.svg" alt="" />1 000
+                    </p>
+                  </div>
+                  <div>
+                    <span>Призовых мест</span>
+                    <p><img src="./assets/icons/crown-icon.svg" alt="" />6</p>
+                  </div>
+                  <div>
+                    <span>Активно до:</span>
+                    <p>
+                      <img src="./assets/icons/rollback-icon.svg" alt="" />02.02
+                      08:34
+                    </p>
+                  </div>
+                  <div class="referal-table-row-right">
+                    <p><img src="./assets/icons/person-icon.svg" alt="" />11</p>
+                    <button>Результаты</button>
+                  </div>
+                </div>
+                <div class="referal-table-row">
+                  <div>
+                    <span>ID: 239432039</span>
+                    <p class="from-nickname">От Анжелы</p>
+                  </div>
+                  <div>
+                    <span>#121 на сумму</span>
+                    <p>
+                      <img src="./assets/icons/coin-white.svg" alt="" />1 000
+                    </p>
+                  </div>
+                  <div>
+                    <span>Призовых мест</span>
+                    <p><img src="./assets/icons/crown-icon.svg" alt="" />6</p>
+                  </div>
+                  <div>
+                    <span>Активно до:</span>
+                    <p>
+                      <img src="./assets/icons/rollback-icon.svg" alt="" />02.02
+                      08:34
+                    </p>
+                  </div>
+                  <div class="referal-table-row-right">
+                    <p><img src="./assets/icons/person-icon.svg" alt="" />11</p>
+                    <button>Результаты</button>
+                  </div>
+                </div>
+                <div class="referal-table-row">
+                  <div>
+                    <span>ID: 239432039</span>
+                    <p class="from-nickname">От Анжелы</p>
+                  </div>
+                  <div>
+                    <span>#121 на сумму</span>
+                    <p>
+                      <img src="./assets/icons/coin-white.svg" alt="" />1 000
+                    </p>
+                  </div>
+                  <div>
+                    <span>Призовых мест</span>
+                    <p><img src="./assets/icons/crown-icon.svg" alt="" />6</p>
+                  </div>
+                  <div>
+                    <span>Активно до:</span>
+                    <p>
+                      <img src="./assets/icons/rollback-icon.svg" alt="" />02.02
+                      08:34
+                    </p>
+                  </div>
+                  <div class="referal-table-row-right">
+                    <p><img src="./assets/icons/person-icon.svg" alt="" />11</p>
+                    <button>Результаты</button>
+                  </div>
+                </div>
+              </div>
+              <div class="referal-table-pagination">
+                <button class="pagination-button">
+                  <img
+                    style="transform: rotate(180deg)"
+                    src="./assets/icons/fade-slider-arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="pagination-button">1</button>
+                <button class="pagination-button">2</button>
+                <button class="pagination-button active">3</button>
+                <button class="pagination-button">4</button>
+                <button class="pagination-button">...</button>
+                <button class="pagination-button">
+                  <img src="./assets/icons/fade-slider-arrow.svg" alt="" />
+                </button>
+              </div>
+              <footer>
+                <div class="footer-wrapper">
+                  <div class="footer-left">
+                    <div class="footer-logo-wrapper">
+                      <a href="/"
+                        ><img src="./assets/images/logotype-dark.svg" alt=""
+                      /></a>
+                      <span class="age-alert"> 18+ </span>
+                    </div>
+                    <p>Copyright © 2025 TwinGo. All rights reserved</p>
+                  </div>
+                  <div class="footer-nav">
+                    <a href="">Соглашение</a>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Контакты</a>
+                    <a href="">Поддержка</a>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-box">
+        <div class="chat-header">
+          <div class="group-header">
+            <div class="group-title">
+              <span class="group-icon">
+                <img src="./assets/icons/chat-icon.svg" alt="shield-icon"
+              /></span>
+              <h3>Чат</h3>
+            </div>
+            <div class="chat-header-btns">
+              <button class="rules-btn">Правила</button>
+              <button class="hide-btn">
+                <img src="./assets/icons/arrow-hide.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-main">
+          <div class="chat-body">
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="./assets/images/profile-img.png" alt="" />
+              <div>
+                <div class="message-header">
+                  <p class="chat-nickname">Анжела</p>
+                  <span class="chat-time">11:47</span>
+                </div>
+                <div class="message-value">
+                  Привет, используйте мой промо H7JI-U396456!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Cообщение..." />
+            <div class="chat-input-btns">
+              <button class="smile-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#smile-icon"></use>
+                </svg>
+              </button>
+              <button class="send-btn">
+                <svg class="icon">
+                  <use href="./assets/icons/icons.svg#telegram-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-layout">
+      <div class="popup create-raffle-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/clover-icon.svg" alt="clover-icon"
+            /></span>
+            <h3>Создание розыгрыша</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="raffle-inputs-wrapper">
+          <div class="custom-input-wrapper">
+            <label>ID Владельца колеса</label>
+            <div class="custom-input"><input type="text"" /></div>
+          </div>
+          <div class="custom-input-wrapper">
+            <label>Сумма розыгрыша</label>
+            <div class="custom-input">
+              <input type="text" value="0.00 ₽" />
+            </div>
+          </div>
+          <div class="custom-input-wrapper">
+            <label>Время на регистрацию</label>
+            <div class="custom-input">
+              <input type="text" value="0 мин" />
+              <p class="inner-label">1 - 10080 мин</p>
+            </div>
+          </div>
+          <div class="custom-input-wrapper">
+            <label>Количество победителей</label>
+            <div class="custom-input">
+              <input type="text" value="0" />
+              <p class="inner-label">1 - 100</p>
+            </div>
+          </div>
+        </div>
+        <p class="simple-text">Учавствуют</p>
+        <div class="deposite-types-btns">
+          <button class="depposite-variant-btn">Есть депозит</button>
+          <button class="depposite-variant-btn active">Нет депозита</button>
+          <button class="depposite-variant-btn">Мои рефералы</button>
+        </div>
+        <button class="btn-secondary raffle-confirm-btn">Далее</button>
+      </div>
+      <div class="popup confirm-raffle-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/clover-icon.svg" alt="clover-icon"
+            /></span>
+            <h3>Подтверждение розыгрыша</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="confirm-stats">
+          <div class="confirm-stat">
+            <span>Выигрыш</span>
+            <p>1 000</p>
+          </div>
+          <div class="confirm-stat">
+            <span>Победители</span>
+            <p>12</p>
+          </div>
+          <div class="confirm-stat">
+            <span>Время</span>
+            <p>120 мин</p>
+          </div>
+        </div>
+        <p class="simple-text">Учавствуют</p>
+        <div class="deposite-types-btns">
+          <button class="depposite-variant-btn active">Нет депозита</button>
+        </div>
+        <div class="write-off-result">
+          <p>Спишется с баланса: <span>1 000.00₽</span></p>
+        </div>
+        <div class="confirm-raffle-btns">
+          <button class="btn-primary">Назад</button
+          ><button class="btn-secondary create-raffle-finish-btn">Создать</button>
+        </div>
+      </div>
+      <div class="popup raffle-created-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/clover-icon.svg" alt="clover-icon"
+            /></span>
+            <h3>Подтверждение розыгрыша</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="raffle-created-btns">
+          <button class="btn-secondary">Перейти к розыгрышу</button>
+          <button class="btn-default">Скопировать ссылку</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

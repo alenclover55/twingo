@@ -11,48 +11,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="app-layout">
       <div class="app-wrapper">
-        <div class="header">
-          <div class="header-wrapper">
-            <div class="header-left">
-              <div class="logo-online-wrapper">
-                <a href="/">
-                  <img src="./assets/images/logotype-dark.svg" alt="logo" />
-                </a>
-                <div class="online-count">
-                  <span class="online-outer">
-                    <span class="online-inner"> </span>
-                  </span>
-                  <p>410</p>
-                </div>
-              </div>
-              <div class="nav">
-                <a class="nav-item" href="">Игры</a>
-                <a class="nav-item" href="">Бонусы</a>
-                <a class="nav-item" href="">Рефералы</a>
-                <a class="nav-item" href="">FAQ</a>
-                <a class="nav-item" href="">Поддержка</a>
-              </div>
-            </div>
-            <div class="auth-btns">
-              <button class="sign-in-btn">
-                <svg class="icon">
-                  <use
-                    xlink:href="./assets/icons/icons.svg#lock-open"
-                  ></use></svg
-                >Вход
-              </button>
-              <button class="sign-up-btn">
-                <svg class="icon">
-                  <use href="./assets/icons/icons.svg#person-add"></use></svg
-                >Регистрация
-              </button>
-            </div>
-          </div>
-        </div>
         <div class="header">
           <div class="header-wrapper">
             <div class="header-left">
@@ -113,124 +76,121 @@
           <div class="sidebar-socials">
             <a class="sidebar-link" href=""
               ><svg class="icon">
-                <use href="./assets/icons/icons.svg#telegram-icon"></use></svg
+                <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
             ></a>
             <a class="sidebar-link" href=""
               ><svg class="icon">
-                <use href="./assets/icons/icons.svg#vk-icon"></use></svg
+                <use href="./assets/icons/icons.svg#bomb-icon"></use></svg
             ></a>
           </div>
         </div>
         <div class="main-app-wrapper">
-          <div class="main slots-page">
+          <div class="main referal-page">
             <div class="container">
-              <div class="group-header">
-                <div class="group-title">
-                  <span class="btn-back">
-                    <img src="./assets/icons/back-icon.svg" alt="" />
-                  </span>
-                  <span class="group-icon">
-                    <img src="./assets/icons/slots-machine_icon.svg" alt=""
-                  /></span>
-                  <h3>Меню</h3>
+              <div class="group-title">
+                <span class="btn-back">
+                  <img src="./assets/icons/back-icon.svg" alt="" />
+                </span>
+                <span class="group-icon">
+                  <img src="./assets/icons/share-icon.svg" alt="" />
+                </span>
+                <h3>Реферальная система</h3>
+              </div>
+              <div class="referal-statistic-wrapper">
+                <div>
+                  <div class="graph">
+                    <p>Статистика за месяц</p>
+                    <div class="chart-container">
+                      <canvas id="myChart" width="1027" height="304"></canvas>
+                    </div>
+                  </div>
+                  <div class="referal-award">
+                    <div class="group-title">
+                      <span class="group-icon">
+                        <img src="./assets/icons/share-icon.svg" alt="" />
+                      </span>
+                      <h3>Ваш доход</h3>
+                    </div>
+                    <div class="referal-award-wrapper"></div>
+                    <div class="custom-input">
+                      <input type="text" value="2000" />
+                    </div>
+                  </div>
+                </div>
+                <div class="referal-scores">
+                  <div class="custom-input">
+                    <input type="text" value="https://twingo.online/?i=6" />
+                    <button class="copy-btn">
+                      <img src="./assets/icons/copy-icon.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="referal-score">
+                    <p>Текущий процент</p>
+                    <span>3%</span>
+                  </div>
+                  <div class="referal-score">
+                    <p>Доход за месяц</p>
+                    <span>2 000 ₽</span>
+                  </div>
+                  <div class="referal-score">
+                    <p>Рефералы</p>
+                    <span>822</span>
+                  </div>
+                  <div class="referal-score">
+                    <p>Заработано всего</p>
+                    <span>9 400 ₽</span>
+                  </div>
+                  <div class="referal-score">
+                    <p>Конверсия</p>
+                    <span>822%</span>
+                  </div>
+                  <div class="telegram-link">
+                    <p>Наш телеграм</p>
+                    <button>Перейти</button>
+                  </div>
                 </div>
               </div>
-              <div class="slots-toolbar">
-                <div class="input-search">
-                  <img src="./assets/icons/search-icon.svg" alt="search" />
-                  <input type="text" />
+              <div class="referal-person-table">
+                <div class="referal-person-table-header">
+                  <p>Айди</p>
+                  <p>Имя</p>
+                  <p>Депозит</p>
+                  <p>Ваш профит</p>
+                  <p>Дата</p>
                 </div>
-                <div class="custom-select-wrapper">
-                  <div class="custom-select-header">
-                    <div class="value-wrapper">
-                      <img src="./assets/icons/providers-icon.svg" alt="" />
-                      <p class="select-value">Провайдеры</p>
-                    </div>
-                    <span>
-                      <img src="./assets/icons/select-arrow.svg" alt="" />
-                    </span>
+                <div class="referal-person-table-body">
+                  <div class="referal-person-table-item">
+                    <p>#45634</p>
+                    <p>Максим</p>
+                    <p>5 345.00</p>
+                    <p>5 345.00</p>
+                    <p>11.02.2024 17:30</p>
                   </div>
-                  <div class="custom-select-body" style="display: none">
-                    <div class="custom-select-option" data-value="provider1">
-                      Провайдер 1
-                    </div>
-                    <div class="custom-select-option" data-value="provider2">
-                      Провайдер 2
-                    </div>
-                    <div class="custom-select-option" data-value="provider3">
-                      Провайдер 3
-                    </div>
-                  </div>
-                </div>
-                <div class="custom-select-wrapper">
-                  <div class="custom-select-header">
-                    <div class="value-wrapper">
-                      <img src="./assets/icons/setting-icon.svg" alt="" />
-                      <p class="select-value">Популярное</p>
-                    </div>
-                    <span>
-                      <img src="./assets/icons/select-arrow.svg" alt="" />
-                    </span>
-                  </div>
-                  <div class="custom-select-body" style="display: none">
-                    <div class="custom-select-option" data-value="provider1">
-                      Популярное
-                    </div>
-                    <div class="custom-select-option" data-value="provider2">
-                      Новинки
-                    </div>
-                    <div class="custom-select-option" data-value="provider3">
-                      Топ выигрышей
-                    </div>
+                  <div class="referal-person-table-item">
+                    <p>#45634</p>
+                    <p>Максим</p>
+                    <p>5 345.00</p>
+                    <p>5 345.00</p>
+                    <p>11.02.2024 17:30</p>
                   </div>
                 </div>
               </div>
-              <div class="slots-grid">
-                <a href=""
-                  ><img src="./assets/images/game1.png" alt="" />
-                  <div class="hover-slots">
-                    <div class="hover-slots-btn">
-                      <button>
-                        <img
-                          width="12"
-                          src="./assets/icons/play-icon.svg"
-                          alt="play"
-                        />
-                      </button>
-                    </div>
-                    <div class="hover-slots-title">
-                      <h3>Dog House</h3>
-                      <p>Pragmatic Play</p>
-                    </div>
-                  </div>
-                </a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game4.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game1.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game2.png" alt="" /></a>
-                <a href=""><img src="./assets/images/game3.png" alt="" /></a>
+              <div class="referal-table-pagination">
+                <button class="pagination-button">
+                  <img
+                    style="transform: rotate(180deg)"
+                    src="./assets/icons/fade-slider-arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="pagination-button">1</button>
+                <button class="pagination-button">2</button>
+                <button class="pagination-button active">3</button>
+                <button class="pagination-button">4</button>
+                <button class="pagination-button">...</button>
+                <button class="pagination-button">
+                  <img src="./assets/icons/fade-slider-arrow.svg" alt="" />
+                </button>
               </div>
               <footer>
                 <div class="footer-wrapper">
@@ -341,6 +301,92 @@
         </div>
       </div>
     </div>
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      let myChart;
+
+      function isMobile() {
+        return window.innerWidth < 768;
+      }
+
+      function createChart() {
+        if (myChart) {
+          myChart.destroy();
+        }
+
+        const lineWidth = isMobile() ? 1 : 3;
+        const pointRadius = isMobile() ? 4 : 4.5;
+        const ticksSize = isMobile() ? 18 : 12;
+
+        myChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: [1, 2, 3, 4, 5, 6],
+            datasets: [
+              {
+                label: "",
+                data: [0, 1, 3, 4, 3, 5],
+                borderColor: "rgb(127, 149, 252)",
+                borderWidth: lineWidth,
+                fill: true,
+                tension: 0.3,
+                pointRadius: pointRadius,
+                pointBackgroundColor: "#7F95FC",
+                backgroundColor: "rgba(61, 124, 224, 0.5)",
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: false,
+                ticks: {
+                  stepSize: 1,
+                  color: "#F1F6FF33",
+                  font: {
+                    family: "Google Sans",
+                    size: ticksSize,
+                    weight: "500",
+                  },
+                },
+                grid: {
+                  color: "#7D8ECA0D",
+                  lineWidth: 1,
+                },
+              },
+              x: {
+                type: "linear",
+                offset: false,
+                grid: {
+                  offset: false,
+                },
+                ticks: {
+                  stepSize: 1,
+                  color: "#4D4F59",
+                  font: {
+                    family: "Google Sans",
+                    size: ticksSize,
+                    weight: "500",
+                  },
+                  padding: 28,
+                },
+                display: false,
+              },
+            },
+            plugins: {
+              legend: {
+                display: false,
+              },
+            },
+          },
+        });
+      }
+      createChart();
+
+      window.addEventListener("resize", createChart);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
