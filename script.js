@@ -103,6 +103,34 @@ $(document).ready(function () {
   const ruleBtn = $(".rules-btn");
   const hideBtn = $(".hide-btn");
   const chatOpenBtn = $(".chat-open-btn");
+
+  // Проверяем ширину окна и скрываем элементы, если меньше 1545px
+  function checkWindowSize() {
+    if ($(window).width() < 1545) {
+      chatHeader.addClass("hidden");
+      chatMain.addClass("hidden");
+      ruleBtn.addClass("hidden");
+      chatBox.addClass("hidden");
+
+      hideBtn.css("transform", "rotate(180deg)"); // Поворачиваем кнопку
+    } else {
+      chatHeader.removeClass("hidden");
+      chatMain.removeClass("hidden");
+      ruleBtn.removeClass("hidden");
+      chatBox.removeClass("hidden");
+
+      hideBtn.css("transform", "rotate(0)"); // Возвращаем кнопку в исходное состояние
+    }
+  }
+
+  // Проверяем размер окна при загрузке
+  checkWindowSize();
+
+  // Проверяем размер окна при изменении размера
+  $(window).resize(function () {
+    checkWindowSize();
+  });
+
   chatOpenBtn.click((e) => {
     e.preventDefault();
     chatHeader.find(".group-title").fadeIn();
@@ -117,7 +145,8 @@ $(document).ready(function () {
     ruleBtn.removeClass("hidden");
     chatBox.removeClass("hidden");
   });
-  $(".hide-btn").click(function () {
+
+  hideBtn.click(function () {
     chatHeader.toggleClass("hidden");
     chatMain.toggleClass("hidden");
     ruleBtn.toggleClass("hidden");
