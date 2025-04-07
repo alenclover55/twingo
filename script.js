@@ -380,6 +380,11 @@ $(".create-raffle-btn").click(() => {
   $(".modal-layout").css("display", "flex");
   $(".create-raffle-modal").fadeIn();
 });
+$(".referal-info-btn").click(() => {
+  $(".modal-layout").css("display", "flex");
+  $(".referal-system-modal").fadeIn();
+});
+
 $(".raffle-confirm-btn").click(() => {
   $(".modal-layout").css("display", "flex");
   $(".popup").hide();
@@ -484,7 +489,10 @@ document.addEventListener("DOMContentLoaded", function () {
     loader.style.display = "none";
 
     toastr.success(
-      "<span class='icon-notif'><img src='./assets/icons/wallet-icon.svg' alt='Иконка'></span>Ваш запрос выполнен успешно! <img src='./assets/icons/gold-coins.svg' alt='Иконка'>"
+      "<span class='icon-notif'><img src='./assets/icons/wallet-icon.svg' alt='Иконка'></span> Баланс пополнен на 500 <img src='./assets/icons/gold-coins.svg' alt='Иконка'>"
+    );
+    toastr.error(
+      "<span class='icon-notif'><img src='./assets/icons/close-mini-icon.svg' alt='Иконка'></span> Вывод средств был отменен"
     );
   }, 2000);
 });

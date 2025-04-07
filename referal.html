@@ -87,14 +87,21 @@
         <div class="main-app-wrapper">
           <div class="main referal-page">
             <div class="container">
-              <div class="group-title">
-                <span class="btn-back">
-                  <img src="./assets/icons/back-icon.svg" alt="" />
-                </span>
-                <span class="group-icon">
-                  <img src="./assets/icons/share-icon.svg" alt="" />
-                </span>
-                <h3>Реферальная система</h3>
+              <div class="group-header">
+                <div class="group-title">
+                  <span class="btn-back">
+                    <img src="./assets/icons/back-icon.svg" alt="" />
+                  </span>
+                  <span class="group-icon">
+                    <img src="./assets/icons/share-icon.svg" alt="" />
+                  </span>
+                  <h3>Реферальная система</h3>
+                </div>
+                <button class="question-btn referal-info-btn">
+                  <svg class="icon">
+                    <use href="./assets/icons/icons.svg#question-icon"></use>
+                  </svg>
+                </button>
               </div>
               <div class="referal-statistic-wrapper">
                 <div>
@@ -298,6 +305,867 @@
               </button>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-layout">
+      <div class="popup referal-system-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/share-icon.svg" alt="shield-icon"
+            /></span>
+            <h3>Реферальная система</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <p class="simple-text">
+          Мы предлагаем современную партнёрскую систему, которая позволяет
+          вам получать комиссию с каждого привлечённого вами пользователя.
+          Вы будете зарабатывать 10% от выгоды казино с каждой ставки, сделанной
+          вашим рефералом. В отличие от традиционных партнёрских программ, ваша
+          комиссия остаётся постоянной, независимо от того, выигрывает ли игрок
+          или проигрывает
+        </p>
+      </div>
+      <div class="popup achievements-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/question-icon.svg" alt="shield-icon"
+            /></span>
+            <h3>Достижения</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <p class="simple-text">
+          Достижение — это уровень, для получения которого необходимо выполнить
+          требования по общей сумме пополнений на сайте за все время. Требования
+          для каждого достижения приведены выше. При получении нового уровня
+          игрок получает бонус и % кэшбэка увеличивается.
+        </p>
+        <div class="levels-grid">
+          <div class="level-card wolf-level">
+            <h3>Волк</h3>
+            <div class="level-params">
+              <div class="level-params-item">
+                <p>Депозит</p>
+                <span>100</span>
+              </div>
+              <div class="level-params-item">
+                <p>Бонус</p>
+                <span>10</span>
+              </div>
+              <div class="level-params-item">
+                <p>Кэшбек</p>
+                <span>1%</span>
+              </div>
+            </div>
+          </div>
+          <div class="level-card wild-level">
+            <h3>Хищник</h3>
+            <div class="level-params">
+              <div class="level-params-item">
+                <p>Депозит</p>
+                <span>500</span>
+              </div>
+              <div class="level-params-item">
+                <p>Бонус</p>
+                <span>50</span>
+              </div>
+              <div class="level-params-item">
+                <p>Кэшбек</p>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="level-card premium-level">
+            <h3>Премиум</h3>
+            <div class="level-params">
+              <div class="level-params-item">
+                <p>Депозит</p>
+                <span>1000</span>
+              </div>
+              <div class="level-params-item">
+                <p>Бонус</p>
+                <span>100</span>
+              </div>
+              <div class="level-params-item">
+                <p>Кэшбек</p>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="level-card alfa-level">
+            <h3>Альфа</h3>
+            <div class="level-params">
+              <div class="level-params-item">
+                <p>Депозит</p>
+                <span>2500</span>
+              </div>
+              <div class="level-params-item">
+                <p>Бонус</p>
+                <span>250</span>
+              </div>
+              <div class="level-params-item">
+                <p>Кэшбек</p>
+                <span>4%</span>
+              </div>
+            </div>
+          </div>
+          <div class="level-card vip-level">
+            <h3>VIP</h3>
+            <div class="level-params">
+              <div class="level-params-item">
+                <p>Депозит</p>
+                <span>5000</span>
+              </div>
+              <div class="level-params-item">
+                <p>Бонус</p>
+                <span>500</span>
+              </div>
+              <div class="level-params-item">
+                <p>Кэшбек</p>
+                <span>5%</span>
+              </div>
+            </div>
+          </div>
+          <div class="level-card profi-level">
+            <h3>Профи</h3>
+            <div class="level-params">
+              <div class="level-params-item">
+                <p>Депозит</p>
+                <span>20000</span>
+              </div>
+              <div class="level-params-item">
+                <p>Бонус</p>
+                <span>2000</span>
+              </div>
+              <div class="level-params-item">
+                <p>Кэшбек</p>
+                <span>7%</span>
+              </div>
+            </div>
+          </div>
+          <div class="level-card legend-level">
+            <h3>Легенда</h3>
+            <img
+              class="level-card-main-icon"
+              src="./assets/icons/account-progress-icons/legend-level-icon-big.svg"
+              alt=""
+            />
+            <div class="level-params">
+              <div class="level-params-item">
+                <p>Депозит</p>
+                <span>99000</span>
+              </div>
+              <div class="level-params-item">
+                <p>Бонус</p>
+                <span>5000</span>
+              </div>
+              <div class="level-params-item">
+                <p>Кэшбек</p>
+                <span>9%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup auth-modal">
+        <div class="auth-wrapper">
+          <img
+            class="auth-bg"
+            src="./assets/images/twingo-register-bg.png"
+            alt=""
+          />
+          <div class="auth-main">
+            <div class="auth-hud">
+              <button class="btn-default active">Вход</button
+              ><button class="btn-default">Регистрация</button
+              ><button class="close-btn">
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="login-block">
+              <div class="auth-field">
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/icons.svg#profile-icon"></use>
+                </svg>
+                <input type="text" placeholder="Логин" />
+              </div>
+              <div class="auth-field">
+                <svg class="icon">
+                  <use xlink:href="./assets/icons/icons.svg#lock-icon"></use>
+                </svg>
+                <input type="text" placeholder="Пароль" />
+                <button class="auth-field-btn">
+                  <svg class="icon">
+                    <use xlink:href="./assets/icons/icons.svg#eye-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="forgot-password-btn">Забыли пароль?</button>
+              <button class="btn-secondary">Войти</button>
+              <p class="simple-text">Другие методы входа</p>
+              <div class="login-variants">
+                <button class="vk-variant">
+                  <img
+                    src="./assets/icons/auth-variants/vk-variant.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="tg-variant">
+                  <img
+                    src="./assets/icons/auth-variants/telegram-variant.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="yandex-variant">
+                  <img
+                    src="./assets/icons/auth-variants/yandex-variant.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="google-variant">
+                  <img
+                    src="./assets/icons/auth-variants/google-variant.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="register-block">
+              <div class="register-type-btns">
+                <button class="register-type-btn active">По логину</button>
+                <button class="register-type-btn">В 1 клик</button>
+              </div>
+              <div class="login-register-type">
+                <div class="auth-field">
+                  <svg class="icon">
+                    <use
+                      xlink:href="./assets/icons/icons.svg#profile-icon"
+                    ></use>
+                  </svg>
+                  <input type="text" placeholder="Логин" />
+                </div>
+                <div class="auth-field">
+                  <img src="./assets/icons/email-icon.svg" alt="" />
+                  <input type="text" placeholder="Email" />
+                </div>
+                <div class="auth-field">
+                  <svg class="icon">
+                    <use xlink:href="./assets/icons/icons.svg#lock-icon"></use>
+                  </svg>
+                  <input type="text" placeholder="Пароль" />
+                  <button class="auth-field-btn">
+                    <svg class="icon">
+                      <use xlink:href="./assets/icons/icons.svg#eye-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="custom-input">
+                  <input type="text" placeholder="Введите промокод" />
+                </div>
+                <button class="btn-secondary">Регистрация</button>
+                <p class="simple-text agreements">
+                  Я подтверждаю, что мне исполнилось 18 лет и я прочитал Условия
+                  предоставления услуг
+                </p>
+              </div>
+              <div class="one-click-register">
+                <button class="btn-secondary">Войти</button>
+                <p class="simple-text agreements">
+                  Я подтверждаю, что мне исполнилось 18 лет и я прочитал Условия
+                  предоставления услуг
+                </p>
+              </div>
+              <p class="simple-text another-methods for-one-click">
+                Другие методы входа
+              </p>
+              <div class="login-variants">
+                <button class="vk-variant">
+                  <img
+                    src="./assets/icons/auth-variants/vk-variant.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="tg-variant">
+                  <img
+                    src="./assets/icons/auth-variants/telegram-variant.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="yandex-variant">
+                  <img
+                    src="./assets/icons/auth-variants/yandex-variant.svg"
+                    alt=""
+                  />
+                </button>
+                <button class="google-variant">
+                  <img
+                    src="./assets/icons/auth-variants/google-variant.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup reset-password-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <h3>Сбросить пароль</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="auth-field">
+          <img src="./assets/icons/email-icon.svg" alt="" />
+          <input type="text" placeholder="Логин" />
+        </div>
+        <button class="btn-secondary">Сбросить пароль</button>
+      </div>
+      <div class="popup chat-rule-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/chat-icon.svg" alt="chat-icon"
+            /></span>
+            <h3>В чате запрещено</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <p class="simple-text">Сливать промо / секретные коды</p>
+        <p class="simple-text">Попрошайничество</p>
+        <p class="simple-text">Показывать чрезмерную агрессию и негатив</p>
+        <p class="simple-text">Обвинять администрацию или сайт в обмане</p>
+        <p class="simple-text">Рекламировать сторонние ресурсы</p>
+        <p class="simple-text">Спамить / флудить</p>
+        <p class="simple-text">Разжигание ненависти</p>
+        <p class="simple-text">Рекламировать реферальный код</p>
+        <button class="btn-secondary">Я ознакомлен</button>
+      </div>
+      <div class="popup wallet-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/wallet-icon.svg" alt="wallet-icon"
+            /></span>
+            <h3>Кошелек</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="wallet-variants-btns">
+          <button class="btn-default deposite-btn active">Пополнение</button>
+          <button class="btn-default withdraw-btn">Вывод</button>
+          <button class="btn-default wallet-history-btn">История</button>
+        </div>
+        <div class="deposite-block">
+          <div class="deposite-main-part">
+            <p class="custom-select-label">Выберите метод</p>
+            <div class="payment-system-select">
+              <div class="wallet-select-header">
+                <img src="./assets/icons/sbp-icon.png" alt="Icon" />
+                <p>Выберите метод</p>
+              </div>
+              <div class="wallet-select-body">
+                <div class="wallet-select-item" data-value="wallet1">
+                  <img src="./assets/icons/sbp-icon.png" alt="Wallet 1" />
+                  <p>СБП</p>
+                </div>
+                <div class="wallet-select-item" data-value="wallet2">
+                  <img src="./assets/icons/fk-wallet-icon.png" alt="Wallet 2" />
+                  <p>FKWallet</p>
+                </div>
+                <div class="wallet-select-item" data-value="wallet2">
+                  <img
+                    src="./assets/icons/crypto-bot-icon.png"
+                    alt="Wallet 2"
+                  />
+                  <p>CryptoBot</p>
+                </div>
+                <div class="wallet-select-item" data-value="wallet2">
+                  <img src="./assets/icons/umoney-icon.png" alt="Wallet 2" />
+                  <p>Юmoney</p>
+                </div>
+              </div>
+            </div>
+            <div class="custom-input-wrapper amount-input">
+              <label>Введите сумму</label>
+              <div class="custom-input">
+                <input type="text" value="0" />
+                <p class="inner-label">500 ₽ - 100 000 ₽</p>
+              </div>
+            </div>
+            <div class="custom-input">
+              <input type="text"" placeholder="Промокод при наличии" />
+            </div>
+            <button class="btn-secondary">Пополнить баланс</button>
+          </div>
+          <div class="choice-part">
+            <div class="custom-input-wrapper amount-input">
+              <label>Введите сумму</label>
+              <div class="custom-input">
+                <input type="text" value="0" />
+                <p class="inner-label">500 ₽ - 100 000 ₽</p>
+              </div>
+            </div>
+            <div class="payments-grid">
+              <button class="payments-btn">
+                <span><img src="./assets/icons/sbp-icon.png" alt="" /></span>
+                <p>СБП</p>
+              </button>
+              <button class="payments-btn">
+                <span
+                  ><img src="./assets/icons/crypto-bot-icon.png" alt=""
+                /></span>
+                <p>CryptoBot</p>
+              </button>
+              <button class="payments-btn">
+                <span><img src="./assets/icons/umoney-icon.png" alt="" /></span>
+                <p>Юmoney</p>
+              </button>
+              <button class="payments-btn">
+                <span
+                  ><img src="./assets/icons/paycard-icon.png" alt=""
+                /></span>
+                <p>Карты</p>
+              </button>
+              <button class="payments-btn">
+                <span
+                  ><img src="./assets/icons/fk-wallet-icon.png" alt=""
+                /></span>
+                <p>FKWallet</p>
+              </button>
+              <button class="payments-btn">
+                <span><img src="./assets/icons/sbp-icon.png" alt="" /></span>
+                <p>СБП/Карты</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="withdraw-block">
+          <div class="main-part">
+            <div class="select-full-wrapper">
+              <p class="custom-select-label">Выберите метод</p>
+              <div class="payment-system-select">
+                <div class="wallet-select-header">
+                  <img src="./assets/icons/sbp-icon.png" alt="Icon" />
+                  <p>Выберите метод</p>
+                </div>
+                <div class="wallet-select-body">
+                  <div class="wallet-select-item" data-value="wallet1">
+                    <img src="./assets/icons/sbp-icon.png" alt="Wallet 1" />
+                    <p>СБП</p>
+                  </div>
+                  <div class="wallet-select-item" data-value="wallet2">
+                    <img
+                      src="./assets/icons/fk-wallet-icon.png"
+                      alt="Wallet 2"
+                    />
+                    <p>FKWallet</p>
+                  </div>
+                  <div class="wallet-select-item" data-value="wallet2">
+                    <img
+                      src="./assets/icons/crypto-bot-icon.png"
+                      alt="Wallet 2"
+                    />
+                    <p>CryptoBot</p>
+                  </div>
+                  <div class="wallet-select-item" data-value="wallet2">
+                    <img src="./assets/icons/umoney-icon.png" alt="Wallet 2" />
+                    <p>Юmoney</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="custom-select-label">Выберите банк</p>
+            <div class="payment-system-select payment-systems">
+              <div class="wallet-select-header">
+                <img src="./assets/icons/sbp-icon.png" alt="Icon" />
+                <p>Выберите метод</p>
+              </div>
+              <div class="wallet-select-body">
+                <div class="wallet-select-item" data-value="wallet1">
+                  <img src="./assets/icons/t-bank-icon.svg" alt="Wallet 1" />
+                  <p>Т-Банк</p>
+                </div>
+              </div>
+            </div>
+            <div class="custom-input-wrapper">
+              <label>Номер телефона</label>
+              <div class="custom-input">
+                <input type="text" placeholder="+7 (000)  000 - 00 - 00" />
+              </div>
+            </div>
+            <div class="custom-input-wrapper">
+              <label>Сумма вывода</label>
+              <div class="custom-input">
+                <input type="text" value="" />
+                <p class="inner-label">500 ₽ - 100 000 ₽</p>
+              </div>
+            </div>
+            <div class="wallet-amount-wrapper">
+              <p>Комиссия:<span>0.00₽</span></p>
+              <p>Сумма к получению: <span>0.00₽</span></p>
+            </div>
+          </div>
+          <div class="check-part">
+            <div class="requisites-list">
+              <p>Метод: <span>SPB</span></p>
+              <p>Сумма: <span>5300</span></p>
+              <p>Комиссия: <span>0.00₽</span></p>
+              <p>Номер телефона: <span>+7 (999) 000-00-00</span></p>
+              <p>Общая комиссия: <span>5035</span></p>
+            </div>
+            <p class="simple-text">
+              Рекомендуем проверить правильность введенных данных перед
+              подтверждением вывода
+            </p>
+            <div class="custom-checkbox">
+              <input id="agree-check" type="checkbox" />
+              <label for="agree-check">
+                Я подтверждаю, что проверил
+                <span>правильность реквизитов вывода</span> и поодтверждаю вывод
+              </label>
+            </div>
+          </div>
+          <button class="btn-secondary">Вывод</button>
+        </div>
+        <div class="wallet-history-wrapper">
+          <div class="wallet-history-menu">
+            <button id="deposits-btn" class="active">Пополнения</button
+            ><button id="withdrawals-btn">Выводы</button>
+          </div>
+          <div class="deposite-history">
+            <div class="table-header">
+              <p>ID</p>
+              <p>Дата</p>
+              <p>Сумма</p>
+              <p>Статус</p>
+            </div>
+            <div class="table-body">
+              <div class="table-item">
+                <p>434756</p>
+                <p>28.04.24</p>
+                <p>2 540.00</p>
+                <p class="waiting">Ожидание</p>
+              </div>
+              <div class="table-item">
+                <p>434756</p>
+                <p>28.04.24</p>
+                <p>2 540.00</p>
+                <p class="waiting">Ожидание</p>
+              </div>
+              <div class="table-item">
+                <p>434756</p>
+                <p>28.04.24</p>
+                <p>2 540.00</p>
+                <p class="waiting">Ожидание</p>
+              </div>
+              <div class="table-item">
+                <p>434756</p>
+                <p>28.04.24</p>
+                <p>2 540.00</p>
+                <p class="waiting">Ожидание</p>
+              </div>
+              <div class="table-item">
+                <p>434756</p>
+                <p>28.04.24</p>
+                <p>2 540.00</p>
+                <p class="waiting">Ожидание</p>
+              </div>
+            </div>
+            <div class="table-history">
+              <button class="arrow-btn">
+                <svg
+                  width="18.033203"
+                  height="18.033081"
+                  viewBox="0 0 18.0332 18.0331"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    id="↳ Icon Color"
+                    d="M7.33 9.01L11.93 13.61C12.3 13.97 12.3 14.57 11.93 14.94C11.56 15.3 10.97 15.3 10.6 14.94L5.34 9.68C4.98 9.31 4.98 8.71 5.34 8.35L10.6 3.09C10.97 2.72 11.56 2.72 11.93 3.09C12.3 3.45 12.3 4.05 11.93 4.42L7.33 9.01Z"
+                    fill="currentColor"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </button>
+              <button class="arrow-btn">
+                <svg
+                  width="19.419922"
+                  height="19.420288"
+                  viewBox="0 0 19.4199 19.4203"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    id="↳ Icon Color"
+                    d="M11.51 9.71L6.56 14.65C6.17 15.05 6.17 15.69 6.56 16.08C6.96 16.48 7.6 16.48 7.99 16.08L13.66 10.42C14.05 10.03 14.05 9.38 13.66 8.99L7.99 3.33C7.6 2.93 6.96 2.93 6.56 3.33C6.17 3.72 6.17 4.36 6.56 4.76L11.51 9.71Z"
+                    fill="currentColor"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="withdraw-history">
+            <div class="table-header">
+              <p>ID</p>
+              <p>Сумма</p>
+              <p>Статус</p>
+            </div>
+            <div class="table-body">
+              <div class="table-item">
+                <div class="table-item-header">
+                  <div class="payment-system-info">
+                    <h3>Usdt TERC20</h3>
+                    <p>28.04.24 11:30</p>
+                  </div>
+                  <p>-2 540.00 ₽</p>
+                  <div class="status-wrapper">
+                    <p class="waiting">Ожидание</p>
+                    <span class="open-indicator">
+                      <img src="./assets/icons/select-arrow.svg" alt=""
+                    /></span>
+                  </div>
+                </div>
+                <div class="table-item-inner">
+                  <p>Реквизиты: <span>***3435</span></p>
+                  <button>Отменить вывод</button>
+                </div>
+              </div>
+
+              <div class="table-item">
+                <div class="table-item-header">
+                  <div class="payment-system-info">
+                    <h3>Usdt TERC20</h3>
+                    <p>28.04.24 11:30</p>
+                  </div>
+                  <p>-2 540.00 ₽</p>
+                  <div class="status-wrapper">
+                    <p class="waiting">Ожидание</p>
+                    <span class="open-indicator">
+                      <img src="./assets/icons/select-arrow.svg" alt=""
+                    /></span>
+                  </div>
+                </div>
+                <div class="table-item-inner">
+                  <p>Реквизиты: <span>***3435</span></p>
+                  <button>Отменить вывод</button>
+                </div>
+              </div>
+              <div class="table-item">
+                <div class="table-item-header">
+                  <div class="payment-system-info">
+                    <h3>Usdt TERC20</h3>
+                    <p>28.04.24 11:30</p>
+                  </div>
+                  <p>-2 540.00 ₽</p>
+                  <div class="status-wrapper">
+                    <p class="waiting">Ожидание</p>
+                    <span class="open-indicator">
+                      <img src="./assets/icons/select-arrow.svg" alt=""
+                    /></span>
+                  </div>
+                </div>
+                <div class="table-item-inner">
+                  <p>Реквизиты: <span>***3435</span></p>
+                  <button>Отменить вывод</button>
+                </div>
+              </div>
+              <div class="table-item">
+                <div class="table-item-header">
+                  <div class="payment-system-info">
+                    <h3>Usdt TERC20</h3>
+                    <p>28.04.24 11:30</p>
+                  </div>
+                  <p>-2 540.00 ₽</p>
+                  <div class="status-wrapper">
+                    <p class="waiting">Ожидание</p>
+                    <span class="open-indicator">
+                      <img src="./assets/icons/select-arrow.svg" alt=""
+                    /></span>
+                  </div>
+                </div>
+                <div class="table-item-inner">
+                  <p>Реквизиты: <span>***3435</span></p>
+                  <button>Отменить вывод</button>
+                </div>
+              </div>
+            </div>
+            <div class="table-history">
+              <button class="arrow-btn">
+                <svg
+                  width="18.033203"
+                  height="18.033081"
+                  viewBox="0 0 18.0332 18.0331"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    id="↳ Icon Color"
+                    d="M7.33 9.01L11.93 13.61C12.3 13.97 12.3 14.57 11.93 14.94C11.56 15.3 10.97 15.3 10.6 14.94L5.34 9.68C4.98 9.31 4.98 8.71 5.34 8.35L10.6 3.09C10.97 2.72 11.56 2.72 11.93 3.09C12.3 3.45 12.3 4.05 11.93 4.42L7.33 9.01Z"
+                    fill="currentColor"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </button>
+              <button class="arrow-btn">
+                <svg
+                  width="19.419922"
+                  height="19.420288"
+                  viewBox="0 0 19.4199 19.4203"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    id="↳ Icon Color"
+                    d="M11.51 9.71L6.56 14.65C6.17 15.05 6.17 15.69 6.56 16.08C6.96 16.48 7.6 16.48 7.99 16.08L13.66 10.42C14.05 10.03 14.05 9.38 13.66 8.99L7.99 3.33C7.6 2.93 6.96 2.93 6.56 3.33C6.17 3.72 6.17 4.36 6.56 4.76L11.51 9.71Z"
+                    fill="currentColor"
+                    fill-opacity="1.000000"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup win-modal">
+        <img src="./assets/images/treasure.png" alt="" />
+        <h3>1.58х</h3>
+        <p>Ваш выигрыш: <span>7900 ₽</span></p>
+      </div>
+      <div class="popup telegram-modal">
+        <div class="group-header">
+          <div class="group-title">
+            <span class="group-icon">
+              <img src="./assets/icons/telegram-icon.svg" alt="shield-icon"
+            /></span>
+            <h3>Telegram</h3>
+          </div>
+          <button class="close-btn">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <p class="simple-text">
+          Для привязки аккаунта напишите нашему боту
+          <span>@twingobet_bot</span> данное сообщение:
+        </p>
+        <span class="tg-bind">/bind 15759</span>
+        <button class="btn-secondary">Проверить привязку</button>
+      </div>
+      <div class="popup profile-bonus-modal">
+        <div class="modal-wrapper">
+          <div class="group-header">
+            <div class="group-title">
+              <span class="group-icon">
+                <img src="./assets/icons/telegram-icon.svg" alt="shield-icon"
+              /></span>
+              <h3>
+                75 FS + 25% к депозиту <br />
+                <span>В игре: Zeus vs Hades — Gods of War!</span>
+              </h3>
+            </div>
+            <button class="close-btn">
+              <svg class="icon">
+                <use xlink:href="./assets/icons/icons.svg#close-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="bonus-timer-wrapper">
+            <p class="bonus-timer-label">Времени осталось:</p>
+            <span class="bonus-timer">02 д. 23 ч. 56 м.</span>
+          </div>
+          <h3 class="question-text">Как получить бонус?</h3>
+          <p class="question-answer">
+            Нажми на кнопку «Подписаться» и пополни счёт от 1 000 ₽<br />
+            Получи +75% к сумме
+          </p>
+          <h3 class="question-text">Какие условия?</h3>
+          <p class="question-answer">
+            Минимальная cумма депозита — 1 000 ₽ / 35 BYN <br />Максимальная
+            сумма бонуса — 15 000 ₽ / 540 BYN <br />
+            Вейджер — х50 <br />
+            Время на отыгрыш бонуса — 3 дня
+          </p>
+          <h3 class="question-text">Что ещё важно знать?</h3>
+          <p class="question-answer">
+            Отыгрыш вейджера возможен с реального и бонусного баланса; Выигрыши
+            от ставок с реального баланса зачисляются на реальный баланс;
+            Выигрыши от ставок с бонусного баланса зачисляются на бонусный
+            баланс; Максимальная сумма выигрыша после отыгрыша бонуса —
+            х3 от суммы бонуса
+          </p>
+          <div class="details-wrapper">
+            <div class="bonus-details-wrapper">
+              <div class="bonus-detail-header">
+                <div>
+                  <h3>Фрираунды</h3>
+                  <p>Игры, в которых вы можете получить фрираунды</p>
+                </div>
+                <span class="select-icon"
+                  ><img src="./assets/icons/select-arrow.svg" alt=""
+                /></span>
+              </div>
+              <div class="bonus-detail-body">
+                <img src="./assets/images/game1.png" alt="" />
+                <img src="./assets/images/game1.png" alt="" />
+                <img src="./assets/images/game1.png" alt="" />
+              </div>
+            </div>
+            <div class="bonus-details-wrapper">
+              <div class="bonus-detail-header">
+                <div>
+                  <h3>Фрираунды</h3>
+                  <p>Игры, в которых вы можете получить фрираунды</p>
+                </div>
+                <span class="select-icon"
+                  ><img src="./assets/icons/select-arrow.svg" alt=""
+                /></span>
+              </div>
+              <div class="bonus-detail-body">
+                <img src="./assets/images/game1.png" alt="" />
+                <img src="./assets/images/game1.png" alt="" />
+                <img src="./assets/images/game1.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <button class="btn-third">Отказаться</button>
         </div>
       </div>
     </div>

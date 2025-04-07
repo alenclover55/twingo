@@ -553,7 +553,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 62px 42px 60px 42px;
-    width: 70%;
+    width: 100%;
     border-radius: 17px;
     overflow: hidden;
     button {
@@ -574,7 +574,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 30%;
+    max-width: 392px;
+    width: 100%;
     padding: 62px 24px 60px 36px;
     border-radius: 17px;
     overflow: hidden;
@@ -3240,6 +3241,11 @@ body {
 .lateral-coin {
   width: 102.87px;
   height: 106.61px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.4);
+  }
 }
 .coinflip-inputs {
   display: flex;
@@ -3698,6 +3704,9 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
+  img {
+    width: 12px;
+  }
 }
 #toast-container > div {
   opacity: 1;
@@ -3706,17 +3715,26 @@ body {
 .toast-close-button {
   font-size: 16px;
   font-weight: 100;
-  padding: 4px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
-  background: #f0f4ff66;
-  top: 0;
+  background: #f0f4ff66 !important;
+  top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
 }
 .toast-success {
   padding: 20px !important;
   border-radius: 15px !important;
   background-position: center !important;
-  box-shadow: 0px 0px 54.4px 0px rgb(15, 18, 27) !important;
+  box-shadow: 0px 0px 54.4px 0px #0f121b !important;
   background: linear-gradient(203.96deg, #0f121b 1.885%, #18b146 91.07%);
+  .toast-progress {
+    background: #124128;
+    margin: 0 20px;
+  }
   .icon-notif {
     display: flex;
     align-items: center;
@@ -3737,6 +3755,53 @@ body {
     203.96deg,
     #0f121b 1.885%,
     #18b146 91.07%
+  ) !important;
+}
+.toast-error {
+  padding: 20px !important;
+  border-radius: 15px !important;
+  background-position: center !important;
+  box-shadow: 0px 0px 54.4px 0px #0f121b !important;
+  background: linear-gradient(203.96deg, #0f121b 1.885%, #ca2727 91.07%);
+
+  .toast-progress {
+    background: #3a1016;
+    margin: 0 20px;
+  }
+  .icon-notif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 5.2px;
+    background: #ca2727;
+    margin-right: 12px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.question-btn {
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  color: #f0f4ff66;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: #f0f4ffb3;
+  }
+  &:active {
+    color: #fff;
+  }
+}
+#toast-container > .toast-error {
+  background-image: linear-gradient(
+    203.96deg,
+    #0f121b 1.885%,
+    #ca2727 91.07%
   ) !important;
 }
 @media (max-width: 1720px) {
@@ -3809,7 +3874,7 @@ body {
       width: 100%;
     }
     &.fit {
-      width: 100%;
+      max-width: 100%;
     }
   }
   .bonuses-cards {
