@@ -3798,6 +3798,17 @@ body {
     #18b146 91.07%
   ) !important;
 }
+.full-menu-layout {
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  display: none;
+  background: #0f121baf;
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+}
 .toast-error {
   padding: 20px !important;
   border-radius: 15px !important;
@@ -4047,6 +4058,7 @@ body {
     top: 0;
     z-index: 10;
     padding: 24px 20px 36px 20px;
+
     &.opened {
       opacity: 1;
       transform: translateX(0);
@@ -4102,6 +4114,8 @@ body {
   }
   .full-mobile-menu-wrapper {
     flex-grow: 1;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
   }
   .sub-menu {
     display: flex;
@@ -4140,6 +4154,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding-top: 20px;
     .sidebar-link {
       width: 44px;
       height: 44px;

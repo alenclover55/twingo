@@ -494,10 +494,12 @@ $(document).ready(function () {
   $(".full-menu-btn").click(function (e) {
     e.preventDefault();
     $(".full-mobile-menu").addClass("opened");
+    $('.full-menu-layout').show()
   });
 
   $(".close-btn").click(function () {
     $(".full-mobile-menu").removeClass("opened");
+    $('.full-menu-layout').hide()
   });
 });
 $(".profile-menu-btn").click(() => {
