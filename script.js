@@ -111,6 +111,8 @@ $(document).ready(function () {
       chatMain.addClass("hidden");
       ruleBtn.addClass("hidden");
       chatBox.addClass("hidden");
+      $(".main-app-wrapper").addClass("chat-open");
+      $(".header-wrapper").addClass("chat-open");
 
       hideBtn.css("transform", "rotate(180deg)"); // Поворачиваем кнопку
     } else {
@@ -118,7 +120,8 @@ $(document).ready(function () {
       chatMain.removeClass("hidden");
       ruleBtn.removeClass("hidden");
       chatBox.removeClass("hidden");
-
+      $(".main-app-wrapper").removeClass("chat-open");
+      $(".header-wrapper").removeClass("chat-open");
       hideBtn.css("transform", "rotate(0)"); // Возвращаем кнопку в исходное состояние
     }
   }
@@ -213,9 +216,11 @@ $(document).ready(function () {
     if ($firstItem.length) {
       const selectedValue = $firstItem.data("value");
       const selectedText = $firstItem.find("p").text();
-      const selectedIcon = $firstItem.find("img").attr("src");
+      const selectedIcon = $firstItem.find(".select-img").attr("src");
 
-      $(select).find(".wallet-select-header img").attr("src", selectedIcon);
+      $(select)
+        .find(".wallet-select-header .select-img")
+        .attr("src", selectedIcon);
       $(select).find(".wallet-select-header p").text(selectedText);
     }
 
@@ -223,15 +228,22 @@ $(document).ready(function () {
       .find(".wallet-select-header")
       .on("click", function (e) {
         e.stopPropagation();
+        const $walletSelectBody = $(this).siblings(".wallet-select-body");
+        const $selectIcon = $(this).find(".select-icon");
 
         $(".wallet-select-body")
-          .not($(this).siblings(".wallet-select-body"))
-          .fadeOut();
+          .not($walletSelectBody)
+          .fadeOut()
+          .siblings(".select-icon")
+          .removeClass("rotate"); // Убираем поворот у других стрелок
 
-        const $walletSelectBody = $(this).siblings(".wallet-select-body");
-        $walletSelectBody.is(":visible")
-          ? $walletSelectBody.fadeOut()
-          : $walletSelectBody.fadeIn();
+        if ($walletSelectBody.is(":visible")) {
+          $walletSelectBody.fadeOut();
+          $selectIcon.removeClass("rotate"); // Убираем поворот
+        } else {
+          $walletSelectBody.fadeIn();
+          $selectIcon.addClass("rotate"); // Добавляем поворот
+        }
       });
 
     $(select)
@@ -240,11 +252,15 @@ $(document).ready(function () {
         const selectedValue = $(this).data("value");
         const selectedText = $(this).find("p").text();
         const selectedIcon = $(this).find("img").attr("src");
+        const $selectIcon = $(select).find(".select-icon");
 
-        $(select).find(".wallet-select-header img").attr("src", selectedIcon);
+        $(select)
+          .find(".wallet-select-header .select-img")
+          .attr("src", selectedIcon);
         $(select).find(".wallet-select-header p").text(selectedText);
 
         $(this).closest(".wallet-select-body").fadeOut();
+        $selectIcon.removeClass("rotate");
       });
   }
 
@@ -255,6 +271,7 @@ $(document).ready(function () {
   $(document).on("click", function (e) {
     if (!$(e.target).closest(".payment-system-select").length) {
       $(".wallet-select-body").fadeOut();
+      $(".select-icon").removeClass("rotate"); // Убираем поворот при клике вне
     }
   });
 });
@@ -341,7 +358,10 @@ $(document).ready(function () {
     const selectedValue = $(this).data("value");
     const selectedText = $(this).find("p").text();
 
-    $(".wallet-select-header img").attr("src", $(this).find("img").attr("src"));
+    $(".wallet-select-header .select-img").attr(
+      "src",
+      $(this).find("img").attr("src")
+    );
     $(".wallet-select-header p").text(selectedText);
 
     $(".choice-part").hide();
@@ -384,7 +404,18 @@ $(".referal-info-btn").click(() => {
   $(".modal-layout").css("display", "flex");
   $(".referal-system-modal").fadeIn();
 });
-
+$(".levels-info-btn").click(() => {
+  $(".modal-layout").css("display", "flex");
+  $(".achievements-modal").fadeIn();
+});
+$(".bonus-info-btn").click(() => {
+  $(".modal-layout").css("display", "flex");
+  $(".profile-bonus-modal").fadeIn();
+});
+$(".wallet-open-btn").click(() => {
+  $(".modal-layout").css("display", "flex");
+  $(".wallet-modal").fadeIn();
+});
 $(".raffle-confirm-btn").click(() => {
   $(".modal-layout").css("display", "flex");
   $(".popup").hide();
@@ -477,7 +508,7 @@ $(document).ready(function () {
   toastr.options = {
     closeButton: true, // Кнопка закрытия
     progressBar: true, // Прогресс-бар
-    timeOut: "100000", // Время отображения (мс)
+    timeOut: "1000", // Время отображения (мс)
     extendedTimeOut: "1000", // Дополнительное время при наведении
     positionClass: "toast-top-right", // Позиция уведомления
   };
@@ -494,5 +525,5 @@ document.addEventListener("DOMContentLoaded", function () {
     toastr.error(
       "<span class='icon-notif'><img src='./assets/icons/close-mini-icon.svg' alt='Иконка'></span> Вывод средств был отменен"
     );
-  }, 2000);
+  }, 1000);
 });

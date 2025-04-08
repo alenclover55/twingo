@@ -13,16 +13,14 @@
 body {
   background: #0f121b;
 }
-.logined {
-  .logo {
-    display: none;
-  }
-  .logo-online-wrapper {
-    gap: 8px;
-    .logo-mobile {
-      img {
-        width: 36px;
-      }
+.logo {
+  display: block;
+}
+.logo-online-wrapper {
+  gap: 8px;
+  .logo-mobile {
+    img {
+      width: 36px;
     }
   }
 }
@@ -168,6 +166,7 @@ body {
     content: "";
     width: 15px;
     height: 15px;
+    animation: pulse 1.5s infinite;
   }
   .online-inner {
     width: 7px;
@@ -175,12 +174,34 @@ body {
     background: #1ebe3c;
     border-radius: 50%;
     content: "";
+    animation: pulse-inner 1.5s infinite;
   }
   p {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
     line-height: 23px;
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: blur(1px);
+  }
+  50% {
+    transform: scale(1.2); /* Увеличение размера */
+    filter: blur(0); /* Убрать размытие */
+  }
+}
+
+@keyframes pulse-inner {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
   }
 }
 .logo-online-wrapper {
@@ -552,6 +573,7 @@ body {
     background-image: url("./assets/images/777img.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding: 62px 42px 60px 42px;
     width: 100%;
     border-radius: 17px;
@@ -600,6 +622,7 @@ body {
   line-height: 149.2%;
   background: transparent;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
   cursor: pointer;
   &:hover {
     color: #fff;
@@ -1186,9 +1209,14 @@ body {
   background: #22293f;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
   height: 56px;
   padding: 0 26px;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   p {
     color: #ffffff;
     font-size: 18px;
@@ -1287,6 +1315,7 @@ body {
 }
 .auth-bg {
   width: 50%;
+  object-fit: cover;
 }
 .auth-hud {
   display: flex;
@@ -2740,6 +2769,11 @@ body {
   display: flex;
   gap: 16px;
   margin-top: 20px;
+  .custom-input {
+    input {
+      padding-right: 10px;
+    }
+  }
 }
 .daily-bonus {
   border-radius: 17px;
@@ -3750,6 +3784,13 @@ body {
     }
   }
 }
+.select-icon {
+  transition: transform 0.3s ease;
+}
+
+.select-icon.rotate {
+  transform: rotate(180deg);
+}
 #toast-container > .toast-success {
   background-image: linear-gradient(
     203.96deg,
@@ -3796,6 +3837,9 @@ body {
   &:active {
     color: #fff;
   }
+}
+.logo-mobile {
+  display: none;
 }
 #toast-container > .toast-error {
   background-image: linear-gradient(
@@ -4555,6 +4599,7 @@ body {
   }
   .bonuses-cards {
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 32px;
   }
   .dealer-slots-wrapper,
   .popular-slots-wrapper {
@@ -4612,6 +4657,9 @@ body {
       padding: 12.5px 26px;
       border-radius: 8px;
     }
+  }
+  .logo-online-wrapper {
+    gap: 12px;
   }
   .chat-header-btns {
     .hide-btn {
@@ -4909,6 +4957,9 @@ body {
         color: #fff;
       }
     }
+  }
+  .activate-promo-input {
+    flex-direction: column;
   }
   .profile-menu-inner {
     top: 48px;
@@ -5737,5 +5788,11 @@ body {
   }
   .active-bonuses {
     grid-column: span 2;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
   }
 }
