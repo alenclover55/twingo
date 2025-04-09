@@ -4194,8 +4194,21 @@ body {
   }
   .full-mobile-menu-wrapper {
     flex-grow: 1;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
+    max-height: calc(100vh - 110px);
+    margin-top: 10px;
+    overflow-y: hidden;
+    &:hover {
+      overflow-y: auto;
+    }
+    &::-webkit-scrollbar {
+      height: 2px;
+      width: 2px;
+      border-radius: 39px;
+      right: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #f0f4ff66;
+    }
   }
   .sub-menu {
     display: flex;
