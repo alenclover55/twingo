@@ -5862,7 +5862,7 @@ body {
     }
   }
   .chat-main {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 215px);
   }
 }
 @media (max-width: 730px) {
