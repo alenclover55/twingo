@@ -1126,60 +1126,8 @@
                 </svg>
               </button>
             </div>
-            <div class="login-block">
-              <div class="auth-field">
-                <svg class="icon">
-                  <use xlink:href="./assets/icons/icons.svg#profile-icon"></use>
-                </svg>
-                <input type="text" placeholder="Логин" />
-              </div>
-              <div class="auth-field">
-                <svg class="icon">
-                  <use xlink:href="./assets/icons/icons.svg#lock-icon"></use>
-                </svg>
-                <input type="text" placeholder="Пароль" />
-                <button class="auth-field-btn">
-                  <svg class="icon">
-                    <use xlink:href="./assets/icons/icons.svg#eye-icon"></use>
-                  </svg>
-                </button>
-              </div>
-              <button class="forgot-password-btn">Забыли пароль?</button>
-              <button class="btn-secondary">Войти</button>
-              <p class="simple-text">Другие методы входа</p>
-              <div class="login-variants">
-                <button class="vk-variant">
-                  <img
-                    src="./assets/icons/auth-variants/vk-variant.svg"
-                    alt=""
-                  />
-                </button>
-                <button class="tg-variant">
-                  <img
-                    src="./assets/icons/auth-variants/telegram-variant.svg"
-                    alt=""
-                  />
-                </button>
-                <button class="yandex-variant">
-                  <img
-                    src="./assets/icons/auth-variants/yandex-variant.svg"
-                    alt=""
-                  />
-                </button>
-                <button class="google-variant">
-                  <img
-                    src="./assets/icons/auth-variants/google-variant.svg"
-                    alt=""
-                  />
-                </button>
-              </div>
-            </div>
-            <div class="register-block">
-              <div class="register-type-btns">
-                <button class="register-type-btn active">По логину</button>
-                <button class="register-type-btn">В 1 клик</button>
-              </div>
-              <div class="login-register-type">
+            <div class="modal-body">
+              <div class="login-block">
                 <div class="auth-field">
                   <svg class="icon">
                     <use
@@ -1187,10 +1135,6 @@
                     ></use>
                   </svg>
                   <input type="text" placeholder="Логин" />
-                </div>
-                <div class="auth-field">
-                  <img src="./assets/icons/email-icon.svg" alt="" />
-                  <input type="text" placeholder="Email" />
                 </div>
                 <div class="auth-field">
                   <svg class="icon">
@@ -1203,50 +1147,114 @@
                     </svg>
                   </button>
                 </div>
-                <div class="custom-input">
-                  <input type="text" placeholder="Введите промокод" />
-                </div>
-                <button class="btn-secondary">Регистрация</button>
-                <p class="simple-text agreements">
-                  Я подтверждаю, что мне исполнилось 18 лет и я прочитал Условия
-                  предоставления услуг
-                </p>
-              </div>
-              <div class="one-click-register">
+                <button class="forgot-password-btn">Забыли пароль?</button>
                 <button class="btn-secondary">Войти</button>
-                <p class="simple-text agreements">
-                  Я подтверждаю, что мне исполнилось 18 лет и я прочитал Условия
-                  предоставления услуг
-                </p>
+                <p class="simple-text">Другие методы входа</p>
+                <div class="login-variants">
+                  <button class="vk-variant">
+                    <img
+                      src="./assets/icons/auth-variants/vk-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="tg-variant">
+                    <img
+                      src="./assets/icons/auth-variants/telegram-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="yandex-variant">
+                    <img
+                      src="./assets/icons/auth-variants/yandex-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="google-variant">
+                    <img
+                      src="./assets/icons/auth-variants/google-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
               </div>
-              <p class="simple-text another-methods for-one-click">
-                Другие методы входа
-              </p>
-              <div class="login-variants">
-                <button class="vk-variant">
-                  <img
-                    src="./assets/icons/auth-variants/vk-variant.svg"
-                    alt=""
-                  />
-                </button>
-                <button class="tg-variant">
-                  <img
-                    src="./assets/icons/auth-variants/telegram-variant.svg"
-                    alt=""
-                  />
-                </button>
-                <button class="yandex-variant">
-                  <img
-                    src="./assets/icons/auth-variants/yandex-variant.svg"
-                    alt=""
-                  />
-                </button>
-                <button class="google-variant">
-                  <img
-                    src="./assets/icons/auth-variants/google-variant.svg"
-                    alt=""
-                  />
-                </button>
+              <div class="register-block">
+                <div class="register-type-btns">
+                  <button class="register-type-btn active">По логину</button>
+                  <button class="register-type-btn">В 1 клик</button>
+                </div>
+                <div class="login-register-type">
+                  <div class="auth-field">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/icons/icons.svg#profile-icon"
+                      ></use>
+                    </svg>
+                    <input type="text" placeholder="Логин" />
+                  </div>
+                  <div class="auth-field">
+                    <img src="./assets/icons/email-icon.svg" alt="" />
+                    <input type="text" placeholder="Email" />
+                  </div>
+                  <div class="auth-field">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/icons/icons.svg#lock-icon"
+                      ></use>
+                    </svg>
+                    <input type="text" placeholder="Пароль" />
+                    <button class="auth-field-btn">
+                      <svg class="icon">
+                        <use
+                          xlink:href="./assets/icons/icons.svg#eye-icon"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="custom-input">
+                    <input type="text" placeholder="Введите промокод" />
+                  </div>
+                  <button class="btn-secondary">Регистрация</button>
+                  <p class="simple-text agreements">
+                    Я подтверждаю, что мне исполнилось 18 лет и я прочитал
+                    Условия предоставления услуг
+                  </p>
+                </div>
+                <div class="one-click-register">
+                  <button class="btn-secondary">Войти</button>
+                  <p class="simple-text agreements">
+                    Я подтверждаю, что мне исполнилось 18 лет и я прочитал
+                    Условия предоставления услуг
+                  </p>
+                </div>
+                <p class="simple-text another-methods for-one-click">
+                  Другие методы входа
+                </p>
+                <div class="login-variants">
+                  <button class="vk-variant">
+                    <img
+                      src="./assets/icons/auth-variants/vk-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="tg-variant">
+                    <img
+                      src="./assets/icons/auth-variants/telegram-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="yandex-variant">
+                    <img
+                      src="./assets/icons/auth-variants/yandex-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="google-variant">
+                    <img
+                      src="./assets/icons/auth-variants/google-variant.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

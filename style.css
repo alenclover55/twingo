@@ -4295,6 +4295,7 @@ body {
   }
   .auth-hud {
     gap: 8px;
+    padding-bottom: 0;
   }
   .login-variants {
     button {
@@ -4362,7 +4363,7 @@ body {
     height: 18px;
   }
   .register-type-btns {
-    margin-top: 28px;
+    margin-top: 0;
     .register-type-btn {
       font-size: 14px;
     }
@@ -4451,6 +4452,11 @@ body {
       width: 105px;
     }
   }
+  .modal-body {
+    margin-top: 24px;
+    overflow-y: auto;
+    max-height: calc(90vh - 64px - 28px - 28px);
+  }
   .achievements-modal {
     width: 661px;
     border-radius: 33px;
@@ -4458,11 +4464,7 @@ body {
     display: none;
     padding: 36px 40px;
     max-height: 90vh;
-    .modal-body {
-      margin-top: 24px;
-      overflow-y: auto;
-      max-height: calc(90vh - 64px - 28px - 28px);
-    }
+
     .levels-grid {
       display: grid !important;
       grid-template-columns: 1fr 1fr 1fr;
