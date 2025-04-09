@@ -35,7 +35,8 @@ body {
   display: none;
 }
 .chat-body {
-  height: calc(100vh - 68px - 190px);
+  /* height: calc(100vh - 68px - 190px); */
+  flex-grow: 1;
   overflow-y: hidden;
   overflow-x: hidden;
   &:hover {
@@ -122,6 +123,12 @@ body {
     transform: translateX(380%);
     opacity: 0;
   }
+}
+.chat-main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 130px);
+  height: calc(100vh - 110px);
 }
 .app-wrapper {
   width: 100%;
@@ -4114,7 +4121,7 @@ body {
   }
   .chat-body {
     overflow-y: auto;
-    height: calc(100vh - 68px - 235px);
+    /* height: calc(100vh - 68px - 235px); */
   }
   .full-mobile-menu {
     display: flex;
@@ -4275,6 +4282,9 @@ body {
         width: 50%;
       }
     }
+  }
+  .chat-main {
+    height: calc(100vh - 155px);
   }
   .mobile-nav {
     position: fixed;
@@ -5761,7 +5771,6 @@ body {
   .chat-body {
     margin-top: 15px;
     /* height: calc(100vh - 68px - 158px); */
-    height: calc(100vh - 68px - 386px);
   }
   .message-value {
     font-size: 12px;
@@ -5851,6 +5860,9 @@ body {
     .custom-input {
       margin-bottom: 340px;
     }
+  }
+  .chat-main {
+    height: calc(100vh - 130px);
   }
 }
 @media (max-width: 730px) {
