@@ -4089,6 +4089,15 @@ body {
       opacity: 0;
     }
   }
+  .close-btn {
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 10px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
   .referal-award-wrapper {
     flex-direction: column;
     .btn-secondary {
@@ -5024,15 +5033,7 @@ body {
       height: 21px;
     }
   }
-  .close-btn {
-    min-width: 40px;
-    min-height: 40px;
-    border-radius: 10px;
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
+
   .activate-promo {
     padding: 20px 24px;
     .group-icon {
