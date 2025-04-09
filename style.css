@@ -2611,6 +2611,7 @@ body {
     background: linear-gradient(210.96deg, #141721 28.537%, #1a1f31 82.063%);
   }
   .rules-btn {
+    cursor: pointer;
     padding: 16px 26px;
     color: #f0f4ff66;
     font-size: 18px;
@@ -2625,6 +2626,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 15px;
+    cursor: pointer;
   }
 }
 .chat-item {
@@ -3136,11 +3138,17 @@ body {
     line-height: 23px;
   }
 }
-.dice-wrapper,
-.coinflip-wrapper {
+.dice-wrapper {
   margin-top: 28px;
   display: flex;
   gap: 52px;
+}
+.coinflip-wrapper {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 376px 1fr;
+  row-gap: 16px;
+  column-gap: 52px;
 }
 .mines-wrapper {
   margin-top: 28px;
@@ -3190,6 +3198,40 @@ body {
   height: 72px;
   border-radius: 20px;
   background: #171b29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .bomb-icon {
+    width: 60%;
+    display: none;
+  }
+  .gem-icon {
+    width: 60%;
+    display: none;
+  }
+  &.gem {
+    background: linear-gradient(
+      207.12deg,
+      #18203d 8.336%,
+      #1b2e59 34.685%,
+      #2a74eb 108.104%
+    );
+    .gem-icon {
+      display: block;
+    }
+  }
+  &.bomb {
+    background: linear-gradient(
+      201.88deg,
+      #131623b0 -0.363%,
+      #321924b0 21.459%,
+      #581d26b0 46.071%,
+      #f32d2db0 104.346%
+    );
+    .bomb-icon {
+      display: block;
+    }
+  }
 }
 .entities-counters {
   width: 100%;
@@ -3881,7 +3923,19 @@ body {
     max-width: 920px;
   }
   .coinflip-wrapper {
-    flex-direction: column-reverse;
+    grid-template-columns: 1fr;
+    .coinflip-game {
+      order: 1;
+    }
+    .coeff-big-list {
+      order: 2;
+    }
+    .coinflip-parameters {
+      order: 3;
+    }
+    .btn-secondary {
+      order: -1;
+    }
   }
   .dice-wrapper {
     flex-direction: column-reverse;
