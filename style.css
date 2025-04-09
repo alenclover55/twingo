@@ -1288,6 +1288,7 @@ body {
   background: #151924;
   display: none;
   padding: 36px 40px;
+  max-height: 90vh;
   .levels-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1303,7 +1304,7 @@ body {
     background: #3d7ce0;
   }
   .simple-text {
-    margin: 24px 0;
+    margin-bottom: 24px;
   }
 }
 .auth-modal {
@@ -4448,6 +4449,36 @@ body {
   .logo-online-wrapper {
     img {
       width: 105px;
+    }
+  }
+  .achievements-modal {
+    width: 661px;
+    border-radius: 33px;
+    background: #151924;
+    display: none;
+    padding: 36px 40px;
+    max-height: 90vh;
+    .modal-body {
+      margin-top: 24px;
+      overflow-y: auto;
+      max-height: calc(90vh - 64px - 28px - 28px);
+    }
+    .levels-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      .legend-level {
+        grid-column: span 3;
+        .level-card-main-icon {
+          right: 70px;
+        }
+      }
+    }
+    .group-icon {
+      background: #3d7ce0;
+    }
+    .simple-text {
+      margin-bottom: 24px;
     }
   }
   .container {
