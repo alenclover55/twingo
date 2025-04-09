@@ -3664,6 +3664,7 @@ body {
   gap: 32px;
   align-items: flex-start;
   margin-top: 28px;
+  position: relative;
 }
 .referal-scores {
   display: grid;
@@ -3922,6 +3923,7 @@ body {
   .container {
     max-width: 920px;
   }
+
   .coinflip-wrapper {
     grid-template-columns: 1fr;
     .coinflip-game {
@@ -4549,6 +4551,7 @@ body {
   }
   .referal-scores {
     min-width: 100%;
+    padding-bottom: 225px;
   }
   .referal-score {
     padding: 22px 24px 26px 24px;
@@ -5535,6 +5538,12 @@ body {
       }
     }
   }
+  .referal-award {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
   .coinflip-game {
     height: 188px;
   }
@@ -5831,6 +5840,15 @@ body {
   .profile-menu-btn {
     img {
       width: 20px;
+    }
+  }
+  .graph {
+    position: absolute;
+    top: 112px;
+  }
+  .referal-scores {
+    .custom-input {
+      margin-bottom: 340px;
     }
   }
 }
