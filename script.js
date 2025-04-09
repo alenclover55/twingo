@@ -129,11 +129,6 @@ $(document).ready(function () {
   // Проверяем размер окна при загрузке
   checkWindowSize();
 
-  // Проверяем размер окна при изменении размера
-  $(window).resize(function () {
-    checkWindowSize();
-  });
-
   chatOpenBtn.click((e) => {
     e.preventDefault();
     chatHeader.find(".group-title").fadeIn();

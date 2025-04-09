@@ -4230,6 +4230,15 @@ body {
       }
     }
   }
+  .slots-grid {
+    a {
+      &:hover {
+        .hover-slots {
+          display: none;
+        }
+      }
+    }
+  }
   .full-menu-socials {
     display: flex;
     align-items: center;
@@ -4398,6 +4407,7 @@ body {
       top: 65px;
     }
   }
+
   .dice-result {
     border-radius: 22px;
     background: linear-gradient(207.65deg, #15204a 15.92%, #3d7ce0 76.702%);
@@ -5862,7 +5872,7 @@ body {
     }
   }
   .chat-main {
-    height: calc(100vh - 215px);
+    height: calc(100vh - 225px);
   }
 }
 @media (max-width: 730px) {
