@@ -5760,7 +5760,8 @@ body {
   }
   .chat-body {
     margin-top: 15px;
-    height: calc(100vh - 68px - 158px);
+    /* height: calc(100vh - 68px - 158px); */
+    height: calc(100vh - 68px - 386px);
   }
   .message-value {
     font-size: 12px;
