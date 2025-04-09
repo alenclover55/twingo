@@ -421,6 +421,12 @@ $(".raffle-confirm-btn").click(() => {
   $(".popup").hide();
   $(".confirm-raffle-modal").fadeIn();
 });
+$(".forgot-password-btn").click(() => {
+  $(".modal-layout").css("display", "flex");
+  $(".popup").hide();
+  $(".reset-password-modal").fadeIn();
+});
+
 $(".create-raffle-finish-btn").click(() => {
   $(".modal-layout").css("display", "flex");
   $(".popup").hide();
@@ -494,12 +500,12 @@ $(document).ready(function () {
   $(".full-menu-btn").click(function (e) {
     e.preventDefault();
     $(".full-mobile-menu").addClass("opened");
-    $('.full-menu-layout').show()
+    $(".full-menu-layout").show();
   });
 
   $(".close-btn").click(function () {
     $(".full-mobile-menu").removeClass("opened");
-    $('.full-menu-layout').hide()
+    $(".full-menu-layout").hide();
   });
 });
 $(".profile-menu-btn").click(() => {
