@@ -12,6 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   </head>
   <body>
     <div class="app-layout">
@@ -268,21 +269,21 @@
                 <p>FAQ</p></a
               >
               <a href="">
-                <span
-                  ><svg class="icon">
-                    <use
-                      href="./assets/icons/icons.svg#support-icon"
-                    ></use></svg
-                ></span>
-                <p>Поддержка</p></a
-              >
+                <span>
+                  <svg class="icon">
+                    <use href="./assets/icons/icons.svg#support-icon"></use>
+                  </svg>
+                </span>
+                <p>Поддержка</p>
+              </a>
               <a class="exit-link" href="">
-                <span
-                  ><svg class="icon">
-                    <use href="./assets/icons/icons.svg#exit-icon"></use></svg
-                ></span>
-                <p>Выход</p></a
-              >
+                <span>
+                  <svg class="icon">
+                    <use href="./assets/icons/icons.svg#exit-icon"></use>
+                  </svg>
+                </span>
+                <p>Выход</p>
+              </a>
             </div>
           </div>
           <div class="full-menu-socials">
@@ -322,6 +323,9 @@
                     <div class="chart-container">
                       <canvas id="myChart" width="1027" height="304"></canvas>
                     </div>
+                    <!-- <div class="chart-container">
+                      <div id="chart"></div>
+                    </div> -->
                   </div>
                   <div class="referal-award">
                     <div class="group-title">
@@ -330,9 +334,11 @@
                       </span>
                       <h3>Ваш доход</h3>
                     </div>
-                    <div class="referal-award-wrapper"></div>
-                    <div class="custom-input">
-                      <input type="text" value="2000" />
+                    <div class="referal-award-wrapper">
+                      <div class="custom-input">
+                        <input type="text" value="2000" />
+                      </div>
+                      <button class="btn-secondary">Получить</button>
                     </div>
                   </div>
                 </div>
@@ -1381,15 +1387,105 @@
         </div>
       </div>
     </div>
-    <script>
-      const ctx = document.getElementById("myChart").getContext("2d");
-      let myChart;
+    <!-- <script>
+      let chart;
 
       function isMobile() {
         return window.innerWidth < 768;
       }
 
       function createChart() {
+        const lineWidth = isMobile() ? 1 : 3;
+        const pointRadius = isMobile() ? 4 : 4.5;
+
+        const options = {
+          chart: {
+            type: "line",
+            height: "100%",
+            zoom: {
+              enabled: false,
+            },
+            toolbar: {
+              show: false,
+            },
+          },
+          series: [
+            {
+              name: "Dataset",
+              data: [0, 1, 3, 4, 3, 5],
+            },
+          ],
+          stroke: {
+            curve: "smooth",
+            width: lineWidth,
+          },
+          markers: {
+            size: pointRadius,
+            colors: ["#7F95FC"],
+          },
+          fill: {
+            type: "gradient", // Заливка градиентом
+            gradient: {
+              shadeIntensity: 1,
+              opacityFrom: 0.7,
+              opacityTo: 0.9,
+              stops: [0, 90, 100],
+            },
+          },
+          xaxis: {
+            categories: [1, 2, 3, 4, 5, 6],
+            labels: {
+              style: {
+                colors: "#4D4F59",
+                fontSize: isMobile() ? "12px" : "14px",
+                fontWeight: 500,
+              },
+            },
+          },
+          yaxis: {
+            labels: {
+              style: {
+                colors: "#F1F6FF33",
+                fontSize: isMobile() ? "12px" : "14px",
+                fontWeight: 500,
+              },
+            },
+          },
+          grid: {
+            borderColor: "#7D8ECA0D",
+            strokeDashArray: 1,
+          },
+          tooltip: {
+            shared: true,
+            intersect: false,
+          },
+        };
+
+        chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      }
+
+      createChart();
+
+      window.addEventListener("resize", createChart);
+    </script> -->
+
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      let myChart;
+      let resizeTimeout;
+
+      function isMobile() {
+        return window.innerWidth < 768;
+      }
+      let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+      gradient.addColorStop(0, "rgba(127, 149, 252, 0.8)");
+      gradient.addColorStop(0, "rgba(127, 149, 252, 0.4)");
+      gradient.addColorStop(1, "rgba(127, 149, 252, 0)");
+      function createChart() {
+        // Не пересоздаем график, если это не первая загрузка и мы на мобильном устройстве
+        if (myChart && isMobile() && !initial) return;
+
         if (myChart) {
           myChart.destroy();
         }
@@ -1412,12 +1508,13 @@
                 tension: 0.3,
                 pointRadius: pointRadius,
                 pointBackgroundColor: "#7F95FC",
-                backgroundColor: "rgba(61, 124, 224, 0.5)",
+                backgroundColor: gradient,
               },
             ],
           },
           options: {
             responsive: true,
+
             maintainAspectRatio: false,
             scales: {
               y: {
@@ -1463,9 +1560,17 @@
           },
         });
       }
-      createChart();
+      createChart(true);
 
-      window.addEventListener("resize", createChart);
+      // Оптимизированный обработчик resize с debounce
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          if (!isMobile()) {
+            createChart();
+          }
+        }, 200);
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>

@@ -2648,6 +2648,12 @@ body {
   font-size: 14px;
   font-weight: 700;
   line-height: 120%;
+  &.vip-profile {
+    color: #eb5b48;
+  }
+  &.premium-profile {
+    color: #18b146;
+  }
 }
 .chat-time {
   color: #ffffff21;
@@ -3252,7 +3258,6 @@ body {
   justify-content: space-between;
 }
 .mines-page {
-  padding-top: 60px;
   .group-icon {
     background: #3d7ce0;
   }
@@ -3486,6 +3491,7 @@ body {
     max-height: 256px;
   }
 }
+
 .referal-award {
   border-radius: 17px;
   background: #131622;
@@ -3605,6 +3611,11 @@ body {
   display: flex;
   align-items: center;
   margin-top: 16px;
+  gap: 16px;
+  .btn-secondary {
+    max-width: 213px;
+    width: 100%;
+  }
 }
 .referal-statistic-wrapper {
   display: flex;
@@ -4012,6 +4023,12 @@ body {
     &.hidden {
       transform: translateX(380%);
       opacity: 0;
+    }
+  }
+  .referal-award-wrapper {
+    flex-direction: column;
+    .btn-secondary {
+      max-width: 100%;
     }
   }
   .login-block {
