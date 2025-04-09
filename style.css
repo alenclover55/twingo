@@ -72,7 +72,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 55px 30px 55px;
+  padding: 20px 55px 20px 55px;
   gap: 20px;
   z-index: 10;
   background: #0f121b;
@@ -109,7 +109,7 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  margin-top: 40px;
+  margin-top: 20px;
   z-index: 10;
   &.hidden {
     background: transparent;
@@ -127,7 +127,6 @@ body {
 .chat-main {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 130px);
   height: calc(100vh - 110px);
 }
 .app-wrapper {
@@ -281,7 +280,7 @@ body {
 .sidebar {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 95.97px);
+  height: calc(100vh - 60.97px);
   position: fixed;
   bottom: 0;
 }
@@ -1281,6 +1280,11 @@ body {
       line-height: 149.2%;
     }
   }
+}
+.modal-body {
+  max-height: calc(90vh - 56px - 36px - 36px);
+  overflow-y: auto;
+  margin-top: 24px;
 }
 .achievements-modal {
   width: 661px;
@@ -4477,6 +4481,7 @@ body {
       background: #f0f4ff66;
     }
   }
+
   .achievements-modal {
     width: 661px;
     border-radius: 33px;
@@ -4484,7 +4489,6 @@ body {
     display: none;
     padding: 36px 40px;
     max-height: 90vh;
-
     .levels-grid {
       display: grid !important;
       grid-template-columns: 1fr 1fr 1fr;
@@ -4733,7 +4737,6 @@ body {
     width: 100%;
     padding: 28px 24px;
     border-radius: 15px;
-    margin: 0 16px;
     .group-icon {
       img {
         width: 22px;
@@ -5930,7 +5933,7 @@ body {
     }
   }
   .chat-main {
-    height: calc(100vh - 225px);
+    height: calc(100vh - 130px);
   }
 }
 @media (max-width: 730px) {
