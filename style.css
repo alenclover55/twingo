@@ -108,7 +108,7 @@ body {
 }
 .chat-box {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   max-width: 317px;
   margin-right: 40px;
   position: fixed;
@@ -132,7 +132,7 @@ body {
 .chat-main {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 110px);
+  height: calc(100dvh - 110px);
 }
 .app-wrapper {
   width: 100%;
@@ -285,7 +285,7 @@ body {
 .sidebar {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 60.97px);
+  height: calc(100dvh - 60.97px);
   position: fixed;
   bottom: 0;
 }
@@ -329,7 +329,7 @@ body {
   padding-left: 174px;
 }
 .main-layout {
-  min-height: calc(100vh - 126px - 206px);
+  min-height: calc(100dvh - 126px - 206px);
 }
 .main-app-wrapper {
   width: calc(100vw - 480px);
@@ -466,7 +466,7 @@ body {
   }
 }
 .modal-wrapper {
-  max-height: 100vh;
+  max-height: 100dvh;
   padding: 4px;
 
   overflow: hidden;
@@ -1287,7 +1287,7 @@ body {
   }
 }
 .modal-body {
-  max-height: calc(90vh - 56px - 36px - 36px);
+  max-height: calc(90dvh - 56px - 36px - 36px);
   overflow-y: auto;
   margin-top: 24px;
 }
@@ -1297,7 +1297,7 @@ body {
   background: #151924;
   display: none;
   padding: 36px 40px;
-  max-height: 90vh;
+  max-height: 90dvh;
   .levels-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
@@ -4147,7 +4147,7 @@ body {
     transition: all 0.3s ease-in-out;
     flex-direction: column;
     width: 291px;
-    max-height: 100vh;
+    max-height: 100dvh;
     height: 100%;
     background: #0f121b;
     position: fixed;
@@ -4210,7 +4210,7 @@ body {
   }
   .full-mobile-menu-wrapper {
     flex-grow: 1;
-    max-height: calc(100vh - 110px);
+    max-height: calc(100dvh - 110px);
     margin-top: 43px;
     overflow-y: hidden;
     &:hover {
@@ -4324,7 +4324,7 @@ body {
     }
   }
   .chat-main {
-    height: calc(100vh - 90px);
+    height: calc(100dvh - 90px);
   }
   .mobile-nav {
     position: fixed;
@@ -4476,7 +4476,7 @@ body {
   .modal-body {
     margin-top: 24px;
     overflow-y: hidden;
-    max-height: calc(90vh - 64px - 28px - 28px);
+    max-height: calc(90dvh - 64px - 28px - 28px);
     &:hover {
       overflow-y: auto;
     }
@@ -4496,7 +4496,7 @@ body {
     background: #151924;
     display: none;
     padding: 36px 40px;
-    max-height: 90vh;
+    max-height: 90dvh;
     .levels-grid {
       display: grid !important;
       grid-template-columns: 1fr 1fr 1fr;
@@ -5939,7 +5939,7 @@ body {
     }
   }
   .chat-main {
-    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
   }
 }
 @media (max-width: 730px) {
@@ -5954,7 +5954,7 @@ body {
     margin-top: 75px;
   }
   .chat-main {
-    height: calc(100vh - 130px);
+    height: calc(100dvh - 130px);
   }
   .chat-header {
     .btn-back {
