@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>FAQ Grid Аккордеон</title>
+    <style>
+      .faq-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+      }
+
+      .faq-item {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question {
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+        position: relative;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: #f0f0f0;
+      }
+
+      .faq-question::after {
+        content: "+";
+        position: absolute;
+        right: 20px;
+        font-size: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item.active .faq-question::after {
+        content: "-";
+      }
+
+      .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        color: #666;
+        line-height: 1.6;
+        background-color: #fff;
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 0 20px 20px 20px;
+        max-height: 500px;
+      }
+
+      h1 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 768px) {
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="faq-container">
+      <div class="faq-grid">
+        <h1>Вопросы и ответы</h1>
+
+        <div class="faq-item">
+          <div class="faq-question">Могу ли я иметь несколько аккаунтов?</div>
+          <div class="faq-answer">
+            Нет, создание нескольких аккаунтов запрещено правилами нашего
+            сервиса.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Как устроена реферальная система?</div>
+          <div class="faq-answer">
+            Реферальная система позволяет получать бонусы за привлеченных
+            друзей. За каждого приглашенного друга вы получаете 10% от его
+            депозитов.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Сколько по времени производится вывод?</div>
+          <div class="faq-answer">
+            Обычно вывод средств занимает от 1 до 24 часов в зависимости от
+            выбранного способа вывода.
+          </div>
+        </div>
+
+        <!-- Остальные вопросы -->
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".faq-question").click(function () {
+          // Закрываем все другие открытые элементы
+          $(".faq-item").not($(this).parent()).removeClass("active");
+          $(".faq-item").not($(this).parent()).find(".faq-answer").css({
+            "max-height": "0",
+            "padding-bottom": "0",
+          });
+
+          // Открываем/закрываем текущий элемент
+          $(this).parent().toggleClass("active");
+          const answer = $(this).next(".faq-answer");
+          if ($(this).parent().hasClass("active")) {
+            answer.css({
+              "max-height": answer[0].scrollHeight + "px",
+              "padding-bottom": "20px",
+            });
+          } else {
+            answer.css({
+              "max-height": "0",
+              "padding-bottom": "0",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

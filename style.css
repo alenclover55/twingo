@@ -12,6 +12,10 @@
 
 body {
   background: #0f121b;
+  -webkit-user-select: none; /* Для Safari и Chrome */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для IE/Edge */
+  user-select: none;
 }
 .logo {
   display: block;
@@ -4034,7 +4038,7 @@ body {
   .header-wrapper {
     width: calc(100vw - 140px);
     &.chat-open {
-      width: calc(100vw - 236px);
+      width: calc(100vw - 140px);
     }
   }
   .main-app-wrapper {
@@ -4060,7 +4064,6 @@ body {
     max-width: none;
     padding: 0 16px;
     margin-right: 0;
-    margin-top: 40px;
   }
 
   .main {
@@ -4116,7 +4119,7 @@ body {
     }
   }
   .chat-box {
-    margin-top: 86px;
+    margin-top: 16px;
   }
   .header-wrapper {
     width: 100%;
@@ -4172,7 +4175,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 43px;
     margin-bottom: 60px;
     a {
       display: flex;
@@ -4209,7 +4211,7 @@ body {
   .full-mobile-menu-wrapper {
     flex-grow: 1;
     max-height: calc(100vh - 110px);
-    margin-top: 10px;
+    margin-top: 43px;
     overflow-y: hidden;
     &:hover {
       overflow-y: auto;
@@ -4281,6 +4283,7 @@ body {
       }
     }
   }
+
   body {
     padding-bottom: 80px;
   }
@@ -4321,7 +4324,7 @@ body {
     }
   }
   .chat-main {
-    height: calc(100vh - 155px);
+    height: calc(100vh - 90px);
   }
   .mobile-nav {
     position: fixed;
@@ -4401,6 +4404,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .chat-header {
+    .btn-back {
+      display: none;
+    }
   }
   .profile-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -5836,9 +5844,7 @@ body {
   .smile-btn {
     min-width: 20px;
   }
-  .chat-box {
-    margin-top: 75px;
-  }
+
   .chat-body {
     margin-top: 15px;
     /* height: calc(100vh - 68px - 158px); */
@@ -5933,7 +5939,7 @@ body {
     }
   }
   .chat-main {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 70px);
   }
 }
 @media (max-width: 730px) {
@@ -5945,6 +5951,15 @@ body {
 @media (max-width: 490px) {
   .chat-box {
     width: 100%;
+    margin-top: 75px;
+  }
+  .chat-main {
+    height: calc(100vh - 130px);
+  }
+  .chat-header {
+    .btn-back {
+      display: flex;
+    }
   }
   .wheel-of-draft {
     img {

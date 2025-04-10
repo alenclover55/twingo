@@ -367,6 +367,7 @@ $(document).ready(function () {
 
 $(".close-btn").click(() => {
   $(".modal-layout").fadeOut();
+  $("body").css("overflow", "auto");
   $(".popup").fadeOut();
 });
 $(".sign-in-btn").click(() => {
@@ -387,45 +388,39 @@ $(".sign-up-btn").click(() => {
   $(".auth-modal .btn-default").removeClass("active"); // Убираем активный класс у всех
   $(".btn-default:contains('Регистрация')").addClass("active"); // Устанавливаем активный класс
 });
-$(".rules-btn").click(() => {
+const modalOpen = (selector) => {
+  $(".popup").hide();
   $(".modal-layout").css("display", "flex");
-  $(".chat-rule-modal").fadeIn();
+  $("body").css("overflow", "hidden");
+  $(selector).fadeIn();
+};
+$(".rules-btn").click(() => {
+  modalOpen(".chat-rule-modal");
 });
 $(".create-raffle-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".create-raffle-modal").fadeIn();
+  modalOpen(".create-raffle-modal");
 });
 $(".referal-info-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".referal-system-modal").fadeIn();
+  modalOpen(".referal-system-modal");
 });
 $(".levels-info-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".achievements-modal").fadeIn();
+  modalOpen(".achievements-modal");
 });
 $(".bonus-info-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".profile-bonus-modal").fadeIn();
+  modalOpen(".profile-bonus-modal");
 });
 $(".wallet-open-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".wallet-modal").fadeIn();
+  modalOpen(".wallet-modal");
 });
 $(".raffle-confirm-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".popup").hide();
-  $(".confirm-raffle-modal").fadeIn();
+  modalOpen(".confirm-raffle-modal");
 });
 $(".forgot-password-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".popup").hide();
-  $(".reset-password-modal").fadeIn();
+  modalOpen(".reset-password-modal");
 });
 
 $(".create-raffle-finish-btn").click(() => {
-  $(".modal-layout").css("display", "flex");
-  $(".popup").hide();
-  $(".raffle-created-modal").fadeIn();
+  modalOpen(".raffle-created-modal");
 });
 $(document).ready(function () {
   $(".register-type-btn").on("click", function () {
@@ -494,12 +489,14 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".full-menu-btn").click(function (e) {
     e.preventDefault();
-    $(".full-mobile-menu").addClass("opened");
     $(".full-menu-layout").show();
+    $("body").css("overflow", "hidden");
+    $(".full-mobile-menu").addClass("opened");
   });
 
   $(".close-btn").click(function () {
     $(".full-mobile-menu").removeClass("opened");
+    $("body").css("overflow", "auto");
     $(".full-menu-layout").hide();
   });
 });
