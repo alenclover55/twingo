@@ -108,6 +108,7 @@ body {
 }
 .chat-box {
   width: 100%;
+  height: 100vh;
   max-width: 317px;
   margin-right: 40px;
   position: fixed;
@@ -4060,7 +4061,6 @@ body {
   .chat-box {
     background: #0f121b;
     width: 360px;
-    height: 100%;
     max-width: none;
     padding: 0 16px;
     margin-right: 0;
