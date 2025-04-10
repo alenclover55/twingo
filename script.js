@@ -3,7 +3,7 @@ function lockViewportHeight() {
 }
 
 window.addEventListener("resize", lockViewportHeight);
-lockViewportHeight(); //
+lockViewportHeight();
 const levelsSlider = new Swiper(".levels-slider", {
   navigation: {
     nextEl: ".levels-slider-btn-next",

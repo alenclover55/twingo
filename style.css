@@ -9,7 +9,9 @@
   outline: none;
   font-family: Google Sans;
 }
-
+body {
+  touch-action: manipulation;
+}
 body {
   background: #0f121b;
   -webkit-user-select: none; /* Для Safari и Chrome */
