@@ -118,8 +118,9 @@ body {
   top: 0;
   margin-top: 20px;
   z-index: 10;
+  transition: all 0.3s ease-in-out;
   &.hidden {
-    background: transparent;
+    transform: translateX(380%);
   }
 }
 .chat-header .group-title,
@@ -1333,6 +1334,7 @@ body {
   background: #151924;
   overflow: hidden;
   display: none;
+  max-height: 90dvh;
 }
 .auth-wrapper {
   display: flex;
@@ -2651,14 +2653,22 @@ body {
     line-height: 131.2%;
     border-radius: 15px;
   }
+}
+.hide-btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  cursor: pointer;
+  background: linear-gradient(210.96deg, #141721 28.537%, #1a1f31 82.063%);
+}
+.header {
   .hide-btn {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 40px;
   }
 }
 .chat-item {
@@ -4036,6 +4046,23 @@ body {
   .referal-scores {
     width: 100%;
   }
+  .chat-box {
+    transform: translateX(380%);
+    &.hidden {
+      transform: translateX(0);
+    }
+  }
+  .chat-header .group-title,
+  .rules-btn,
+  .chat-main {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(380%);
+    opacity: 0;
+    &.hidden {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 @media (max-width: 1545px) {
   .container {
@@ -4069,6 +4096,16 @@ body {
       transform: rotate(180deg);
     }
   }
+  .hide-btn {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+    background: linear-gradient(210.96deg, #141721 28.537%, #1a1f31 82.063%);
+  }
   .chat-box {
     background: #0f121b;
     width: 360px;
@@ -4076,7 +4113,12 @@ body {
     padding: 0 16px;
     margin-right: 0;
   }
-
+  .header {
+    .hide-btn {
+      right: 10px;
+      transform: rotate(180deg);
+    }
+  }
   .main {
     width: 100%;
     padding-left: 0;
@@ -4331,6 +4373,11 @@ body {
       }
     }
   }
+  .header {
+    .hide-btn {
+      display: none;
+    }
+  }
   .chat-main {
     height: calc(100dvh - 90px);
   }
@@ -4483,11 +4530,8 @@ body {
   }
   .modal-body {
     margin-top: 24px;
-    overflow-y: hidden;
+    overflow-y: auto;
     max-height: calc(90dvh - 64px - 28px - 28px);
-    &:hover {
-      overflow-y: auto;
-    }
     &::-webkit-scrollbar {
       height: 2px;
       width: 2px;
@@ -4855,15 +4899,13 @@ body {
   .logo-online-wrapper {
     gap: 12px;
   }
-  .chat-header-btns {
-    .hide-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      img {
-        width: 24px;
-        height: 24px;
-      }
+  .hide-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    img {
+      width: 24px;
+      height: 24px;
     }
   }
   .group-title {
@@ -5122,7 +5164,6 @@ body {
   }
   .wallet-modal {
     width: 100%;
-    margin: 0 16px;
     border-radius: 10px;
     background: #151924;
     padding: 28px 24px;
@@ -5955,8 +5996,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-@media (max-width: 490px) {
+@media (max-width: 560px) {
   .chat-box {
     width: 100%;
     margin-top: 75px;
@@ -5964,6 +6004,8 @@ body {
   .chat-main {
     height: calc(100dvh - 130px);
   }
+}
+@media (max-width: 490px) {
   .chat-header {
     .btn-back {
       display: flex;

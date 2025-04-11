@@ -113,22 +113,11 @@ $(document).ready(function () {
   // Проверяем ширину окна и скрываем элементы, если меньше 1545px
   function checkWindowSize() {
     if ($(window).width() < 1545) {
-      chatHeader.addClass("hidden");
-      chatMain.addClass("hidden");
-      ruleBtn.addClass("hidden");
-      chatBox.addClass("hidden");
       $(".main-app-wrapper").addClass("chat-open");
       $(".header-wrapper").addClass("chat-open");
-
-      hideBtn.css("transform", "rotate(180deg)"); // Поворачиваем кнопку
     } else {
-      chatHeader.removeClass("hidden");
-      chatMain.removeClass("hidden");
-      ruleBtn.removeClass("hidden");
-      chatBox.removeClass("hidden");
       $(".main-app-wrapper").removeClass("chat-open");
       $(".header-wrapper").removeClass("chat-open");
-      hideBtn.css("transform", "rotate(0)"); // Возвращаем кнопку в исходное состояние
     }
   }
 
@@ -160,7 +149,12 @@ $(document).ready(function () {
       chatHeader.find(".group-title").fadeOut();
       chatHeader.find(".group-title").css("display", "none");
       chatHeader.find(".rules-btn").css("display", "none");
-      hideBtn.css("transform", "rotate(180deg)");
+
+      if ($(window).width() < 1545) {
+        hideBtn.css("transform", "rotate(0)");
+      } else {
+        hideBtn.css("transform", "rotate(180deg)");
+      }
       chatHeader.find(".rules-btn").fadeOut();
       $(".main-app-wrapper").addClass("chat-open");
       $(".header-wrapper").addClass("chat-open");
@@ -168,7 +162,12 @@ $(document).ready(function () {
       chatHeader.find(".group-title").fadeIn();
       chatHeader.find(".group-title").css("display", "flex");
       chatHeader.find(".rules-btn").css("display", "block");
-      hideBtn.css("transform", "rotate(0)");
+
+      if ($(window).width() < 1545) {
+        hideBtn.css("transform", "rotate(180deg)");
+      } else {
+        hideBtn.css("transform", "rotate(0)");
+      }
       chatHeader.find(".rules-btn").fadeIn();
       $(".main-app-wrapper").removeClass("chat-open");
       $(".header-wrapper").removeClass("chat-open");
