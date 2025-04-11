@@ -381,18 +381,18 @@ $(".sign-in-btn").click(() => {
   $(".auth-modal").fadeIn();
   $(".login-block").fadeIn();
   $(".register-block").hide();
-  $(".auth-modal .btn-default").removeClass("active"); // Убираем активный класс у всех
-  $(".btn-default:contains('Вход')").addClass("active"); // Устанавливаем активный класс
+  $("body").css("overflow", "hidden");
+  $(".auth-modal .btn-default").removeClass("active");
+  $(".btn-default:contains('Вход')").addClass("active");
 });
 $(".sign-up-btn").click(() => {
   $(".modal-layout").css("display", "flex");
   $(".auth-modal").fadeIn();
   $(".register-block").fadeIn();
   $(".login-block").hide();
-
-  // Установка активного класса для кнопки "Регистрация"
-  $(".auth-modal .btn-default").removeClass("active"); // Убираем активный класс у всех
-  $(".btn-default:contains('Регистрация')").addClass("active"); // Устанавливаем активный класс
+  $("body").css("overflow", "hidden");
+  $(".auth-modal .btn-default").removeClass("active");
+  $(".btn-default:contains('Регистрация')").addClass("active");
 });
 const modalOpen = (selector) => {
   $(".popup").hide();
@@ -464,14 +464,17 @@ $(document).ready(function () {
   $(".faq-header").on("click", function () {
     const faqBody = $(this).next(".faq-body");
     const wrapper = $(this).closest(".faq-item");
-    console.log(wrapper);
-    if (faqBody.is(":visible")) {
-      wrapper.css("grid-row", "span 1");
-      faqBody.slideUp();
+
+    if (faqBody.hasClass("active")) {
+      wrapper.removeClass("active");
+      faqBody.removeClass("active").slideUp();
     } else {
-      $(".faq-body:visible").slideUp();
-      wrapper.css("grid-row", "span 3");
-      faqBody.slideDown();
+      $(".faq-body.active").removeClass("active").slideUp();
+      $(".faq-item.active").removeClass("active");
+
+      // Открываем текущий
+      wrapper.addClass("active");
+      faqBody.addClass("active").slideDown();
     }
   });
 });
